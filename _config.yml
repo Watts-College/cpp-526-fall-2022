@@ -9,7 +9,7 @@
 # COURSE INSTRUCTOR: 
 
 author:
-    name:       Jamison Crawford
+    name:       Jacob Young
     github:     jamisoncrawford   # Github username for avatar
 
 # calendly app for virtual office hours
@@ -51,13 +51,13 @@ header:
 
 # GITHUB CONFIGURATIONS 
 
-url :               "https://ds4ps.github.io"
+url :               "https://watts-college.github.io"
 baseurl:            "/cpp-526-sum-2021"
-course_url:         "http://ds4ps.org/cpp-526-sum-2021/"
+course_url:         "https://watts-college.github.io/cpp-526-fall-2021/"
 title:              DS4PS # don't change this
 
 github_info:
-    username:          DS4PS # Github location of the course
+    username:          Watts-College # Github location of the course
     branch:            master
     website-repo:      cpp-526-sum-2021
     course-repo:       cpp-526-sum-2021
