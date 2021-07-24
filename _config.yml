@@ -52,7 +52,7 @@ header:
 # GITHUB CONFIGURATIONS 
 
 url :               "https://watts-college.github.io"
-baseurl:            "/cpp-526-sum-2021"
+baseurl:            "/cpp-526-fall-2021"
 course_url:         "https://watts-college.github.io/cpp-526-fall-2021/"
 title:              watts-college # don't change this
 
