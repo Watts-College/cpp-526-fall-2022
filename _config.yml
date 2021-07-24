@@ -54,7 +54,7 @@ header:
 url :               "https://watts-college.github.io"
 baseurl:            "/cpp-526-sum-2021"
 course_url:         "https://watts-college.github.io/cpp-526-fall-2021/"
-title:              DS4PS # don't change this
+title:              watts-college # don't change this
 
 github_info:
     username:          Watts-College # Github location of the course
