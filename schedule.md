@@ -2,36 +2,36 @@
 layout: schedule
 title: Schedule
 
-canvas: 
-  assignment_url: 'https://canvas.asu.edu/courses/88304/assignments'
-  yellowdig_url: 'https://canvas.asu.edu/courses/88304/assignments/2253262'
-  
+canvas:
+  assignment_url: 'https://canvas.asu.edu/courses/92494/assignments'
+  yellowdig_url: 'https://canvas.asu.edu/courses/92494/assignments/2358903'
+
 lab-due-dates:
-  lab-01: 'SAT July 10'
-  lab-02: 'SAT July 17'
-  lab-03: 'SAT July 24'
-  lab-04: 'SAT July 31'
-  lab-05: 'SAT Aug 07'
-  lab-06: 'FRI August 10'
- 
+  lab-01: 'WED August 25'
+  lab-02: 'WED September 1'
+  lab-03: 'WED September 8'
+  lab-04: 'WED September 15'
+  lab-05: 'WED September 22'
+  lab-06: 'WED September 29'
+
 discussion-dates:
-  topic-00: 'FRI July 02'
-  topic-01: 'FRI July 09'
-  topic-02: 'FRI July 16'
-  topic-03: 'FRI July 23'
-  topic-04: 'FRI July 30'
-  topic-05: 'FRI Aug 06'
-  topic-06: 'FRI Aug 10'
-  
+  topic-00: 'MON August 23'
+  topic-01: 'FRI August 27'
+  topic-02: 'FRI September 3'
+  topic-03: 'FRI September 10'
+  topic-04: 'FRI September 17'
+  topic-05: 'FRI September 24'
+  topic-06: 'FRI October 1'
+
 final-project:
-  due-date: 'FRI Aug 10'
+  due-date: 'WED October 6'
 
 code-through:
-  due-date: 'FRI Aug 10'
-  
+  due-date: 'WED October 6'
+
 ---
- 
-<!--- 
+
+<!---
 New sections start with 2 stars:  ** Section Title
 New units start with 3 stars:     *** {Unit Metadata}
 -----------------------------start example
@@ -45,7 +45,7 @@ Unit Metadata is comprised of:
 @assignment - turn on lecture icon
 @lecture - turn on lecture icon
 @foldout - activate unit content (allow foldout)
-Submit Buttons - 
+Submit Buttons -
   <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">Submit Lab</a>
   <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 -->
@@ -54,7 +54,7 @@ Submit Buttons -
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -66,49 +66,13 @@ Submit Buttons -
 
 ** Welcome
 
-*** { @unit = "", @title = "Meet Your Instructor", @lecture, @foldout }
-
-<br>
-
-## About Your Instructor
-
-Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
-
-* Visit his [GitHub](https://github.com/jamisoncrawford) profile
-* View his [RPubs](https://rpubs.com/jamisoncrawford) portfolio
-* Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C1A5x6LCDJo?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/C1A5x6LCDJo) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:07**) Two Universities, One Course
-* (**01:06**) My Relationship to the Course
-* (**01:38**) Teaching Experience & Course Origins
-* (**02:30**) What I Do as a Data Scientist
-* (**04:10**) Want a "Hard" Skill?  Do the Work!
-* (**05:40**) Course Resources & Assignment Tips
-* (**07:21**) Resources to Learn & Resources to Ignore
-* (**09:06**) Why the "Unofficial" YouTube Channel Is Invaluable
-* (**09:44**) Weekly To-Do Checklists 
-* (**10:26**) Dispute Your Irrational Beliefs on Data Science
-* (**11:18**) First Assignment: Introduce Yourself
-* (**11:33**) Express Yourself
-
-<br>
-
 *** { @unit = "", @title = "The R Toolkit", @reading, @lecture, @foldout }
 
-## Introducing R 
+## Introducing R
 
-R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell. 
+R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell.
 
-Watch the video below for a brief introduction to R as it's used today. 
+Watch the video below for a brief introduction to R as it's used today.
 
 <br>
 
@@ -118,7 +82,7 @@ Watch the video below for a brief introduction to R as it's used today.
 
 ## The R Toolkit
 
-In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. 
+In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives.
 
 **RStudio** helps you manage projects by organizing files, scripts, packages and output. **Markdown** is a simple formatting convention that allows you to create publication-quality documents. **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
@@ -136,7 +100,7 @@ The following resources will help you get a better understanding of these tools.
 
 ## Visualizing Tooling
 
-Each tool you'll use in this course has a corresponding image, summarized below. 
+Each tool you'll use in this course has a corresponding image, summarized below.
 
 <br>
 
@@ -178,13 +142,13 @@ The following video provides a tour of the RStudio interface and key components 
 * Major interface components and features
 
 <br>
- 
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/xgPwDlAtuNI??rel=0&modestbranding=1&autohide=1&showinfo=0" 
-frameborder="0" allow="accelerometer; 
-autoplay; encrypted-media; gyroscope; 
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/xgPwDlAtuNI??rel=0&modestbranding=1&autohide=1&showinfo=0"
+frameborder="0" allow="accelerometer;
+autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
- 
+
 <br>
 
 Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in the description or bookmarks in the progress bar.
@@ -234,13 +198,13 @@ The following video provides a brief introduction to Markdown fundamentals.
 * List Sub-Items & Hyperlinks
 
 <br>
- 
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/oXgFrUq6btQ??rel=0&modestbranding=1&autohide=1&showinfo=0" 
-frameborder="0" allow="accelerometer; 
-autoplay; encrypted-media; gyroscope; 
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/oXgFrUq6btQ??rel=0&modestbranding=1&autohide=1&showinfo=0"
+frameborder="0" allow="accelerometer;
+autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
- 
+
 <br>
 
 Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in the description or bookmarks in the progress bar.
@@ -274,13 +238,13 @@ The following video provides a tutorial for using GitHub Issues.
 * Creating, labeling, and assigning collaborators
 
 <br>
- 
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0" 
-frameborder="0" allow="accelerometer; 
-autoplay; encrypted-media; gyroscope; 
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0"
+frameborder="0" allow="accelerometer;
+autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
- 
+
 <br>
 
 Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
@@ -318,13 +282,13 @@ The following video provides a tutorial and demonstration of R Markdown.
 * Completing Assignments
 
 <br>
- 
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/ALwHaNzQub0??rel=0&modestbranding=1&autohide=1&showinfo=0" 
-frameborder="0" allow="accelerometer; 
-autoplay; encrypted-media; gyroscope; 
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ALwHaNzQub0??rel=0&modestbranding=1&autohide=1&showinfo=0"
+frameborder="0" allow="accelerometer;
+autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen></iframe>
- 
+
 <br>
 
 Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in the description or bookmarks in the progress bar.
@@ -346,23 +310,23 @@ Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in 
 
 ## Understand Your Resources
 
-Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative. 
+Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative.
 
-These courses are designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models. 
+These courses are designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models.
 
-Learning how to seek help and use discussion boards will accelerate learning and facilitate collaboration. Social coding tools like GitHub use these features extensively. 
+Learning how to seek help and use discussion boards will accelerate learning and facilitate collaboration. Social coding tools like GitHub use these features extensively.
 
-We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need. 
+We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need.
 
 <br>
 
 ### Troubleshooting & Clarification
 
-If you find something confusing, let us know (likely others will find it confusing as well). 
+If you find something confusing, let us know (likely others will find it confusing as well).
 
 * Schedule a Zoom call with your instructor and screen share to walk through issues
-* Post a question to the [course discussion board](https://ds4ps.org/cpp-526-sum-2020/help/)
-* Request a walk-through and your instructor will provide examples and steps 
+* Post a question to the [course discussion board](https://ds4ps.org/cpp-526-fall-2020/help/)
+* Request a walk-through and your instructor will provide examples and steps
 
 As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
 
@@ -378,9 +342,9 @@ Adapted from **[SRGRAFO](https://www.srgrafo.com/)**.
 
 Note that the discussion board is hosted by the GitHub issues feature. It is a great forum because:
 
-* You can format code and math using standard markdown syntax. 
-* You can cut and paste images directly into the message. 
-* You can direction responses using @username mentions. 
+* You can format code and math using standard markdown syntax.
+* You can cut and paste images directly into the message.
+* You can direction responses using @username mentions.
 
 Please preview your responses before posting to ensure proper formatting. Note that you format code by placing fences around the code:
 
@@ -391,7 +355,7 @@ lm( y ~ x1 + x2 )
 ```
 ````
 
-The fences are made of three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard) and shared with the *tilde* (`~`). 
+The fences are made of three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard) and shared with the *tilde* (`~`).
 
 ````
 ```
@@ -412,10 +376,10 @@ b1 = cov(x,y) / var(x)
 
 The following checklist will help you organize and prepare for success in this course.
 
-- [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
-- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
-- [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
+- [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-fall-2021/)
+- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
+- [ ] [Sign-Up for a GitHub Account](https://github.com/join)
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/92494/assignments/2358903) (See Below)
 - [ ] (Recommended) Skim Readings
 - [ ] (Recommended) Videos
 
@@ -430,8 +394,8 @@ The following checklist will help you organize and prepare for success in this c
 We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
 
 1. A little about yourself
-2. Your previous experience with data analytics 
-3. One thing you hope to do with your new skills in data analytics 
+2. Your previous experience with data analytics
+3. One thing you hope to do with your new skills in data analytics
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">Post to YellowDig</a>
 
@@ -445,7 +409,7 @@ We will be using a discussion board called **YellowDig** for this course. Introd
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -455,13 +419,13 @@ We will be using a discussion board called **YellowDig** for this course. Introd
 #########################################
 -->
 
-** Week 1 - Functions and Vectors 
+** Week 1 - Functions and Vectors
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
 ## Description
 
-This unit introduces the most fundamental building blocks of data programming in R. 
+This unit introduces the most fundamental building blocks of data programming in R.
 
 * **Vectors** are one or more values of the same type - each column in a table is a vector
 * **Functions** are defined operations that transform individual or summarize multiple values
@@ -727,7 +691,7 @@ The following checklist will help you stay organized in your first week.
 
 - [ ] Complete Assigned Readings: [Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html), [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html), & [Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
-- [ ] Complete & Submit [Lab 01](https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 01](https://ds4ps.org/cpp-526-fall-2020/labs/lab-01-instructions.html) (See Below)
 - [ ] (Recommended) Videos
 
 <br>
@@ -738,16 +702,16 @@ The following checklist will help you stay organized in your first week.
 
 The world is simultaneously generating more data than it has ever before, as well as pushing for policies for making government data more accessible and democratic. These trends and movements is an important enabling aspect of data science, becuse it provides opportunity for real insights that can change our understanding of systems and allow us to hold institutions accountable.
 
-So ignoring potential problems with big and open data for now, read about two interesting cases where big and open data have offered deep insights into city planning and human nature. 
+So ignoring potential problems with big and open data for now, read about two interesting cases where big and open data have offered deep insights into city planning and human nature.
 
 "[A Data Analyst's Blog](https://www.npr.org/sections/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city
 ) Is Transforming How New Yorkers See Their City", NPR, Nov 2018.
 
 [How a blog saved OK Cupid](https://fivethirtyeight.com/features/christian-rudder-dataclysm-okcupid/), FiveThirtyEight Blog, Nov 2014.
 
-<br> 
+<br>
 
-**ASSIGNMENT:** 
+**ASSIGNMENT:**
 
 > For your discussion topic this week, find one data-driven blog post from Ben Wellington's [I Quant NY](http://iquantny.tumblr.com/) and/or OK Cupid's [OK Trends](https://theblog.okcupid.com/tagged/data) where you discovered something cool that you did not know, and share it with the group. In your post highlight what is interesting about the example, and what data made it possible.
 
@@ -757,15 +721,15 @@ So ignoring potential problems with big and open data for now, read about two in
 
 <br>
 
-You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIxJok), or this short interview. 
+You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIxJok), or this short interview.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZTdPpoUp25w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br>
 
-**Note:** You get points on Yellowdig by interacting with content. That means creating new posts and participating in posts that your classmates create. Your Yellowdig posts are due on Friday, but you gain points throughout the week by participating in discussions. 
+**Note:** You get points on Yellowdig by interacting with content. That means creating new posts and participating in posts that your classmates create. Although your Yellowdig posts are due on a specific day, you gain points throughout the week by participating in discussions.
 
-You can earn up to 20 points a week, and points reset on Fridays. You need to earn 100 points throughout the seven-week term, which means averaging 15 points a week. 
+You can earn up to 20 points a week, and points reset on Fridays. You need to earn 100 points throughout the seven-week term, which means averaging 15 points a week.
 
 <br>
 <br>
@@ -800,7 +764,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -850,9 +814,9 @@ This section introduces logical statements used to create custom groups from you
 
 ## Learning Objectives
 
-Once you have completed this section you will be able to 
+Once you have completed this section you will be able to
 * translate human language phrases to a computer language
-* create subsets of data 
+* create subsets of data
 
 ## Assigned Reading
 
@@ -860,13 +824,13 @@ Required:
 
 [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
 
-## Lab 
+## Lab
 
 Lab-02 covers the following topics:
 
 * Logical operators
-* Group construction 
-* Descriptive statistics 
+* Group construction
+* Descriptive statistics
 
 <br>
 <br>
@@ -942,7 +906,7 @@ The following checklist will help you stay organized in your second week.
 
 You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is [nothing hotter](http://www.startfactor.pt/uploads/3/8/5/0/38505347/r-is-still-hot.pdf) than learning R.
 
-But what is R, and what are the ~~nerds~~ cool kids using it for? 
+But what is R, and what are the ~~nerds~~ cool kids using it for?
 
 **This week, your task is to explore a few blogs about tools in R and find one package or application that you are excited about. It can be an analytics package, a graphics package, a specific application, or a tutorial on a topic that interests you. I don't expect you use of understand the package or tutorial, rather just identify a tool that would be useful given your interests.**
 
@@ -988,7 +952,7 @@ You will need a basic understanding of constructing groups and subsets in these 
 * Compound Logical Statements (2.1)  
 * The Opposite-Of Operator (2.2)  
 
-The rest of the chapter is useful information to come back to, but not needed for the lab. 
+The rest of the chapter is useful information to come back to, but not needed for the lab.
 
 *Similar to last week, the chapter highlights some easy ways to make errors with your code. We don't want to convince you that R is hard, but rather to ensure that you are paying attention to some subtle features of machine language that can impact your data.*
 
@@ -1012,7 +976,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -1031,9 +995,9 @@ Click to download the lab template. Modify and submit using the instructions.
 ### Advice on Learning R
 
 > People naturally go through a few phases. When you start out, you don’t have many tips and techniques at your disposal. So, you are forced to do the simplest thing possible using the simplest ideas. And sometimes you face problems that are really hard to solve, because you don’t know quite the right techniques yet. So, the very earliest phase, you’ve got a few techniques that you understand really well, and you apply them everywhere because those are the techniques you know.
-> 
+>
 > And the next stage that a lot of people go through, is that you learn more techniques, and more complex ways of solving problems, and then you get excited about them and start to apply them everywhere possible. So instead of using the simplest possible solution, you end up creating something that’s probably overly complex or uses some overly general formulation.
-> 
+>
 > And then eventually you get past that and it’s about understanding, “what are the techniques at my disposal? Which techniques fit this problem most naturally? How can I express myself as clearly as possible, so I can understand what I am doing, and so other people can understand what I am doing?” I talk about this a lot but think explicitly about code as communication. You are obviously telling the computer what to do, but ideally you want to write code to express what it means or what it is trying to do as well, so when others read it and when you in the future reads it, you can understand some of the reasoning.
 
 ~ Hadley Wickham [Advice to Young and Old R Programmers](https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/)
@@ -1047,13 +1011,13 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This section introduces the Core R graphics engine. 
+This section introduces the Core R graphics engine.
 
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* Use the plot() function 
-* Build custom graphics with base graphing commands: 
+* Use the plot() function
+* Build custom graphics with base graphing commands:
   * points()  
   * lines(), abline()    
   * text()  
@@ -1063,7 +1027,7 @@ Once you have completed this section you will be able to:
 
 Required:
 
-Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
+Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments.
 
 [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
 [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
@@ -1072,7 +1036,7 @@ Suggested:
 
 [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
-*Help with R graphics:* 
+*Help with R graphics:*
 
 * [R Graph Gallery](https://www.r-graph-gallery.com/)  
 * [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
@@ -1087,9 +1051,9 @@ Suggested:
 * [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
 * [Help Me Viz](https://twitter.com/HelpMeViz)  
 
-## Lab 
+## Lab
 
-Lab-03 introduces the primary plotting functions used to build graphics. 
+Lab-03 introduces the primary plotting functions used to build graphics.
 
 * plot()  
 * points()  
@@ -1145,7 +1109,7 @@ This week you will begin working in the core R graphics engine. This discussion 
 
 Your task is to select a specialized graphic that you could use in your own (hypothetical) research or professional life, then describe what data or topic from your own work the visualization would be useful for. Reference the R package you would need for the task.
 
-For example, I might say that I work creating budgets for a government organization. I could use a [Sankey Diagram](https://www.getrichslowly.org/sankey-diagrams/) from the [D3 Package](https://www.r-graph-gallery.com/sankey-diagram/) to visualize our budget. 
+For example, I might say that I work creating budgets for a government organization. I could use a [Sankey Diagram](https://www.getrichslowly.org/sankey-diagrams/) from the [D3 Package](https://www.r-graph-gallery.com/sankey-diagram/) to visualize our budget.
 
 You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/) and [The Data Viz Project](https://datavizproject.com/) helpful.
 
@@ -1163,7 +1127,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 This lab is designed to introduce you to core visualization functions by replicating an elaborate graphic.
 
-We recommend you **skim** the chapters on graphing functions and custom graphics in R. 
+We recommend you **skim** the chapters on graphing functions and custom graphics in R.
 
 * [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
 * [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
@@ -1188,7 +1152,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -1198,7 +1162,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 4 - Dynamic Visualization 
+** Week 4 - Dynamic Visualization
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1206,7 +1170,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This section introduces the use of R Shiny **widgets** to make graphs dynamic. 
+This section introduces the use of R Shiny **widgets** to make graphs dynamic.
 
 ## Learning Objectives
 
@@ -1214,7 +1178,7 @@ Dynamic graphics allow a user to select parameters that change the visualization
 
 By the end of this unit you will be able to:
 
-* Construct widgets to allow users to select inputs. 
+* Construct widgets to allow users to select inputs.
 * Convert static graphics to dynamic graphics using the Shiny package.  
 
 ## Assigned Reading
@@ -1227,13 +1191,13 @@ Read the notes on using R Shiny **widgets** and **render** functions to accept u
 
 <br>
 
-## Lab 
+## Lab
 
 Lab 04 will again use the graph that was featured in the New York Times:
 
 ![](assets/img/pitcher-dominance.png)
 
-<br> 
+<br>
 
 Try the [**interactive graphic**](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html) at the NYT.
 
@@ -1338,11 +1302,11 @@ There is a lot of science behind data visualization, but the art to storytelling
 
 <div style="max-width:560px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/david_mccandless_the_beauty_of_data_visualization" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
 
-Unfortunately, it is much easier to create tragically bad graphics than it is to create good graphics. For your blog this week, read the *Calling Bullshit* overview on [proportional ink](https://callingbullshit.org/tools/tools_proportional_ink.html) and [misleading axes](https://callingbullshit.org/tools/tools_misleading_axes.html) to develop some sensitivity about misleading graphics. 
+Unfortunately, it is much easier to create tragically bad graphics than it is to create good graphics. For your blog this week, read the *Calling Bullshit* overview on [proportional ink](https://callingbullshit.org/tools/tools_proportional_ink.html) and [misleading axes](https://callingbullshit.org/tools/tools_misleading_axes.html) to develop some sensitivity about misleading graphics.
 
-Find a graph that violates one of these principles, or commits an equally egregious visualization crime. Share the graph and explain what offense has been committed. You might start by searching for "bad graphs" on google images. 
+Find a graph that violates one of these principles, or commits an equally egregious visualization crime. Share the graph and explain what offense has been committed. You might start by searching for "bad graphs" on google images.
 
-This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-the-clowns/) in bar charts is one of my favorites. You might also enjoy [pizza charts](http://getdolphins.com/blog/the-worst-graphs-of-2017/) or [these gems](https://www.distractify.com/humor/2017/05/26/cszBB/hilariously-bad-graphs). 
+This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-the-clowns/) in bar charts is one of my favorites. You might also enjoy [pizza charts](http://getdolphins.com/blog/the-worst-graphs-of-2017/) or [these gems](https://www.distractify.com/humor/2017/05/26/cszBB/hilariously-bad-graphs).
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1378,7 +1342,7 @@ Click to download the lab template.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -1388,7 +1352,7 @@ Click to download the lab template.
 #########################################
 -->
 
-** Week 5 - Data Wrangling 
+** Week 5 - Data Wrangling
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1396,7 +1360,7 @@ Click to download the lab template.
 
 ## Description
 
-This unit focuses on the important task of "**data wrangling**", various manipulations that allow you to quickly filter, join, sort, transform, and describe your data. The **dplyr** package and **tidyverse** tools are some of the most popular in R. 
+This unit focuses on the important task of "**data wrangling**", various manipulations that allow you to quickly filter, join, sort, transform, and describe your data. The **dplyr** package and **tidyverse** tools are some of the most popular in R.
 
 ## Learning Objectives
 
@@ -1404,9 +1368,9 @@ By the end of this unit you will be able to:
 
 * Subset data by rows or columns
 * Create multi-dimensional summary tables by grouping data
-* Generate new variables through transformations of existing variables 
-* Write efficient "data recipes" using pipe operators 
- 
+* Generate new variables through transformations of existing variables
+* Write efficient "data recipes" using pipe operators
+
 ## Assigned Reading
 
 Read the notes on data wrangling in R:
@@ -1419,7 +1383,7 @@ You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-con
 
 <br>
 
-## Lab 
+## Lab
 
 Lab 05 will use data on traffic accidents in the City of Tempe:
 
@@ -1496,7 +1460,7 @@ Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in 
 
 The following checklist will help you stay organized in your fifth week.
 
-- [ ] Complete Assigned Readings: [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html), [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html), [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html) 
+- [ ] Complete Assigned Readings: [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html), [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html), [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 05](https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html) (See Below)
 - [ ] (Recommended) Videos
@@ -1511,9 +1475,9 @@ The following checklist will help you stay organized in your fifth week.
 
 ### Data APIs
 
-Part of the reason data science has grown so much as a field in recent years is because of advances in computing technologies that allows us to run powerful programs and to work with large datasets on personal computers. But just as important, data has become so ubiquitous, cheap, and valuable for organizations. 
+Part of the reason data science has grown so much as a field in recent years is because of advances in computing technologies that allows us to run powerful programs and to work with large datasets on personal computers. But just as important, data has become so ubiquitous, cheap, and valuable for organizations.
 
-Your skill level in data science can be measured by how quickly you can take a real-world problem and produce analysis that offers better solutions than the status quo. Analyzing the data is important, but the process of obtaining data is not a trivial step. Having knowledge about where to look for data, or how to augment your existing data, will help you be more effective as an analyst. 
+Your skill level in data science can be measured by how quickly you can take a real-world problem and produce analysis that offers better solutions than the status quo. Analyzing the data is important, but the process of obtaining data is not a trivial step. Having knowledge about where to look for data, or how to augment your existing data, will help you be more effective as an analyst.
 
 Next week we will discuss some ways to get data into R. You can always download data from a website in its current format (CSV, SPSS, or Stata, etc.) then import it into R. Alternatively, it is typically more efficient to use an API.
 
@@ -1521,7 +1485,7 @@ API stands for "Application Programming Interface", which is computer science ja
 
 In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. To see some examples visit the [Data Science Toolkit](http://www.datasciencetoolkit.org) website, and test out some APIs. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
 
-The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time). 
+The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time).
 
 R packages translate the API into functions that will translate your request into the correct API format, send the request, return the data directly into R, and often convert it into an easy to use format like a data frame. In this way, you can quickly access thousands of datasets in real time through R, and you can also store your requests in scripts for future use.
 
@@ -1529,9 +1493,9 @@ For the discussion topic this week find an example of an API that could be usefu
 
 [Tutorial on Data USA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b)
 
-You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access. 
+You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access.
 
-*Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.* 
+*Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.*
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1545,7 +1509,7 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 ## Lab-05 - Data Wrangling
 
-This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions. 
+This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions.
 
 **Note:** *These data and techniques will be used for your final project in building an interactive dashboard.*
 
@@ -1565,7 +1529,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -1583,36 +1547,36 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This week has you continue practicing "**data wrangling**". This week will add the step of joining multiple datasets prior to analysis. We will continue to use the **dplyr** package. 
+This week has you continue practicing "**data wrangling**". This week will add the step of joining multiple datasets prior to analysis. We will continue to use the **dplyr** package.
 
 ## Learning Objectives
 
 By the end of this unit you will be able to:
 
 * Merge two related datasets using join functions
-* Identify appropriate keys for joins 
+* Identify appropriate keys for joins
 * Determine whether you need an inner, outer, or full join
- 
+
 ![](assets/img/dplyr-joins.png)
 
 ## Assigned Reading
 
-Read the notes on data joins: 
+Read the notes on data joins:
 
 * [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
 
-For reference: 
+For reference:
 
 * [Manny Gimond's Page](https://mgimond.github.io/ES218/Week03c.html)  
 * [Data Joins in dplyr](https://stat545.com/join-cheatsheet.html)  
 
 <br>
 
-## Lab 
+## Lab
 
-Lab 06 will use Lahman data on baseball for some [moneyball examples](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53). 
+Lab 06 will use Lahman data on baseball for some [moneyball examples](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53).
 
-We will join the Salaries table to player bios (Master table) and performance data (Batting and Fielding) to assess which characteristics predict salary and which teams have been able to most efficiently convert salary to wins. 
+We will join the Salaries table to player bios (Master table) and performance data (Batting and Fielding) to assess which characteristics predict salary and which teams have been able to most efficiently convert salary to wins.
 
 <br>
 
@@ -1627,7 +1591,7 @@ We will join the Salaries table to player bios (Master table) and performance da
 
 ## Assigned Reading
 
-Read the notes on data joins: 
+Read the notes on data joins:
 
 * [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
 
@@ -1639,7 +1603,7 @@ Read the notes on data joins:
 
 The following checklist will help you stay organized in your sixth week.
 
-- [ ] Complete Assigned Readings: [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html) 
+- [ ] Complete Assigned Readings: [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 06](https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html) (See Below)
 - [ ] (Recommended) Begin [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
@@ -1653,17 +1617,17 @@ The following checklist will help you stay organized in your sixth week.
 
 ## GitHub for Government
 
-Hear me out. The government is just one big open-source project. 
+Hear me out. The government is just one big open-source project.
 
-Except currently the source code is only edited irregularly by one giant team, and they debate every single change, and then vote on it. 
+Except currently the source code is only edited irregularly by one giant team, and they debate every single change, and then vote on it.
 
 The code is now millions of lines long, and most of it doesn't do what it was originally designed for, but it is too exhausting to make changes so they just leave it. There are lots of bugs, and many features do not work.
 
-Despite the flaws, the code somehow still functions (albeit very slowly now, like really slow), and the fan is making funny noises, and sometimes we get a blue screen during the budget process and it shuts down for a few weeks. But when it is re-started, it still kinda works. 
+Despite the flaws, the code somehow still functions (albeit very slowly now, like really slow), and the fan is making funny noises, and sometimes we get a blue screen during the budget process and it shuts down for a few weeks. But when it is re-started, it still kinda works.
 
 ---
 
-It's an imperfect metaphor, but many people have theorized that government can learn a lot from how open source projects are managed (or governed if we are being precise). 
+It's an imperfect metaphor, but many people have theorized that government can learn a lot from how open source projects are managed (or governed if we are being precise).
 
 <br>
 <div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government" width="854" height="480" style="position:absolute;center:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
@@ -1677,9 +1641,9 @@ There's been some uptake of these ideas:
 
 > Ben Balter wants to get all up in the U.S. government’s code, and he thinks you should be able to as well. Balter, a Washington, D.C.-based lawyer, is GitHub’s official Government Evangelist. His purpose: to educate government agencies about adopting open-source software.
 
-My favorite Ben Balter project was something simple. GIS files are notoriously large and hard to work with (for some reason GIS shapefiles still split data into five separate files that you have to keep together for them to work properly). 
+My favorite Ben Balter project was something simple. GIS files are notoriously large and hard to work with (for some reason GIS shapefiles still split data into five separate files that you have to keep together for them to work properly).
 
-The open source community has created some better data structures that are more efficient and easier to share (geoJSON files), but the geographers that work for cities were all trained on ArcGIS products so it's all they know! Ben wrote a script that downloaded all of Washington DC's open data files, converted them to better formats, then uploaded them to GitHub so others have access. 
+The open source community has created some better data structures that are more efficient and easier to share (geoJSON files), but the geographers that work for cities were all trained on ArcGIS products so it's all they know! Ben wrote a script that downloaded all of Washington DC's open data files, converted them to better formats, then uploaded them to GitHub so others have access.
 
 https://github.com/benbalter/dc-maps
 
@@ -1698,7 +1662,7 @@ plot( traffic, col="steelblue" )
 
 For this week, read about how [GitHub has evolved to support government](https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/).
 
-Do you think open source frameworks would help open the black box and make government more accessible? Would government become more accessible, or alienate regular citizens that are not computer scientists? Would it make influence from special interests more transparent, or would it make it easier for them to hijack the process of shaping local laws? 
+Do you think open source frameworks would help open the black box and make government more accessible? Would government become more accessible, or alienate regular citizens that are not computer scientists? Would it make influence from special interests more transparent, or would it make it easier for them to hijack the process of shaping local laws?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1730,7 +1694,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 
 
-<!--- 
+<!---
 #########################################
 #########################################
 ##########
@@ -1772,11 +1736,11 @@ The following checklist will help you stay organized for your final week.
 
 Since you are sharing your code-through with your classmates on Yellowdig, it will serve as your discussion topic this week.
 
-If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file. 
+If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html')">Code-Through Instructions</a>
 
-Download the recommended template for your code-through with the below link. 
+Download the recommended template for your code-through with the below link.
 
 **Note:** *This is one of many possible layouts; modify appropriately.*
 
@@ -1822,11 +1786,11 @@ We recommended creating new tabs independently, then incorporating them into the
 
 
 
-<style> 
+<style>
 body {
    font-family: "Roboto", sans-serif;
 }
- 
+
 p.italic {
   font-style: italic;
   color: black !important;
