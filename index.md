@@ -13,7 +13,7 @@ info:
  course_title: Foundations of Data Science Part I
  course_number: CPP 526
  course_level: Graduate
- course_website: 'https://canvas.asu.edu/courses/92494'
+ course_website: https://canvas.asu.edu/courses/92494
  course_start_end_dates: August 19 - October 8, 2021
  course_prerequisites:  
  class_meets_when:  Asynchronous  
