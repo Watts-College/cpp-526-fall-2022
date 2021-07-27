@@ -6,14 +6,14 @@
 
 
 
-# COURSE INSTRUCTOR: 
+# COURSE INSTRUCTOR:
 
 author:
     name:       Jacob Young
     github:     jacobtnyoung   # Github username for avatar
 
 # calendly app for virtual office hours
-calendly:  'https://calendly.com/jamisoncrawford/20min'
+calendly:  'https://calendly.com/jacobtnyoung/cpp-526-student-meeting'
 
 
 
@@ -33,7 +33,7 @@ brand:
 
 header:
 - title: Syllabus
-  url: 
+  url:
 - title: Course Schedule
   url: schedule/
 - title: Textbook
@@ -43,13 +43,13 @@ header:
 # - title: Yellowdig
 #   url: https://www.yellowdig.com/board/43114
 # - title: Canvas
-#  url: https://canvas.asu.edu/courses/29528
+#  url: https://canvas.asu.edu/courses/92494
 - title: Get Help
   url: help/
 
 
 
-# GITHUB CONFIGURATIONS 
+# GITHUB CONFIGURATIONS
 
 url :               "https://watts-college.github.io"
 baseurl:            "/cpp-526-fall-2021"
@@ -82,17 +82,17 @@ permalink:          /:title/
 social:
     email:
     website:
-    facebook:       
+    facebook:
     flickr:
     dribbble:
     github:
     googleplus:
-    instagram:      
-    linkedin:       
+    instagram:
+    linkedin:
     pinterest:
-    twitter:        
-    vimeo:          
-    youtube:        
+    twitter:
+    vimeo:
+    youtube:
 
 # Twitter share button
 twitter_username:
@@ -144,7 +144,3 @@ collections:
 markdown: kramdown
 kramdown:
   parse_block_html: true
-
-
-
-
