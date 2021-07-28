@@ -956,11 +956,11 @@ The rest of the chapter is useful information to come back to, but not needed fo
 
 *Similar to last week, the chapter highlights some easy ways to make errors with your code. We don't want to convince you that R is hard, but rather to ensure that you are paying attention to some subtle features of machine language that can impact your data.*
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-02-instructions-v2.html')">LAB-02 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions-v2.html')">LAB-02 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true')">LAB-02 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true')">LAB-02 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1093,7 +1093,7 @@ The following checklist will help you stay organized in your third week.
 
 - [ ] Complete Assigned Readings: [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) & [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 03](https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 03](../labs/lab-03-instructions.html) (See Below)
 - [ ] (Recommended) Read [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
 <br>
@@ -1134,11 +1134,11 @@ We recommend you **skim** the chapters on graphing functions and custom graphics
 
 Code is provided to get you started, but you will have to use documentation and the web to push the boundaries of your new knowledge of these functions.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html')">LAB-03 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB-03 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1185,7 +1185,7 @@ By the end of this unit you will be able to:
 
 Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
 
-* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf)  
+* [Notes on R Shiny](../raw/master/lectures/shiny-widgets.pdf)  
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
 
@@ -1216,7 +1216,7 @@ But we will now add an input widget that allows users to select one team that wi
 
 Required:
 
-* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf)
+* [Notes on R Shiny](../raw/master/lectures/shiny-widgets.pdf)
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
@@ -1283,11 +1283,11 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 The following checklist will help you stay organized in your fourth week.
 
-- [ ] Complete Assigned Readings: [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+- [ ] Complete Assigned Readings: [Notes on R Shiny](../raw/master/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 04](https://ds4ps.org/cpp-526-sum-2020/labs/lab-04-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 04](../labs/lab-04-instructions.html) (See Below)
 - [ ] (Recommended) Videos
-- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1322,13 +1322,13 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 
 This lab is designed to introduce you to R Shiny by making last week's graphic interactive and dynamic.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-04-instructions.html')">LAB-04 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB-04 Instructions</a>
 
 Click to download the lab template.
 
 **Note:** Rather than submitting a PDF or HTML file, please submit only the R or R Markdown file.  *Please ignore the boilerplate directions in this week's assignment*.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.zip?raw=true')">LAB-04 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.zip?raw=true')">LAB-04 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1462,9 +1462,9 @@ The following checklist will help you stay organized in your fifth week.
 
 - [ ] Complete Assigned Readings: [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html), [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html), [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 05](https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 05](../labs/lab-05-instructions.html) (See Below)
 - [ ] (Recommended) Videos
-- [ ] (Recommended) Begin Planning [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
+- [ ] (Recommended) Begin Planning [Final Code-Through Project](../labs/code-through-assignment.html)
 
 <br>
 
@@ -1513,11 +1513,11 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 
 **Note:** *These data and techniques will be used for your final project in building an interactive dashboard.*
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html')">LAB-05 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB-05 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true')">LAB-05 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true')">LAB-05 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1605,9 +1605,9 @@ The following checklist will help you stay organized in your sixth week.
 
 - [ ] Complete Assigned Readings: [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 06](https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html) (See Below)
-- [ ] (Recommended) Begin [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
-- [ ] (Recommended) Begin [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+- [ ] Complete & Submit [Lab 06](../labs/lab-06-instructions.html) (See Below)
+- [ ] (Recommended) Begin [Final Code-Through Project](../labs/code-through-assignment.html)
+- [ ] (Recommended) Begin [Final Dashboard Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1678,11 +1678,11 @@ Do you think open source frameworks would help open the black box and make gover
 
 This lab is designed to introduce you to primary data join functions in R.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html')">LAB-06 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB-06 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true')">LAB-06 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true')">LAB-06 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1722,8 +1722,8 @@ Click to download the lab template. Modify and submit using the instructions.
 
 The following checklist will help you stay organized for your final week.
 
-- [ ] Finalize & Submit Your [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
-- [ ] Finalize & Submit Your [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+- [ ] Finalize & Submit Your [Final Code-Through Project](../labs/code-through-assignment.html)
+- [ ] Finalize & Submit Your [Final Dashboard Project](../labs/final-project-instructions.html)
 - [ ] (Recommended) Submit a Course Evaluation
 
 <br>
@@ -1738,13 +1738,13 @@ Since you are sharing your code-through with your classmates on Yellowdig, it wi
 
 If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html')">Code-Through Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/code-through-assignment.html')">Code-Through Instructions</a>
 
 Download the recommended template for your code-through with the below link.
 
 **Note:** *This is one of many possible layouts; modify appropriately.*
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-projects/cpp-526-CodeThrough-LastName.zip?raw=true')">Base Code-Through Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-projects/cpp-526-CodeThrough-LastName.zip?raw=true')">Base Code-Through Template</a>
 
 ## Submit to Canvas
 
@@ -1765,7 +1765,7 @@ Download the recommended template for your code-through with the below link.
 
 Working with the crash data from Lab-05, you will extend the work you began in Lab-04 by building on a dynamic data dashboard that will be used to explore and reveal insights in Tempe crash data.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html')">Final Project Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
 
 The following link downloads two templates:
 
@@ -1774,7 +1774,7 @@ The following link downloads two templates:
 
 We recommended creating new tabs independently, then incorporating them into the final dashboard.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true')">Final Project Templates</a>
+<a class="uk-button uk-button-default" onclick="window.open('../blob/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true')">Final Project Templates</a>
 
 ## Submit to Canvas
 
