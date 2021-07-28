@@ -691,7 +691,7 @@ The following checklist will help you stay organized in your first week.
 
 - [ ] Complete Assigned Readings: [Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html), [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html), & [Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
-- [ ] Complete & Submit [Lab 01](.. /labs/lab-01-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 01](../labs/lab-01-instructions.html) (See Below)
 - [ ] (Recommended) Videos
 
 <br>
