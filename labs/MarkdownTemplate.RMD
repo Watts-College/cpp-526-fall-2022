@@ -1,0 +1,70 @@
+---
+title: "My Doc"
+author: "John Doe"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+---
+
+
+
+
+## Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo=TRUE, message=FALSE, warning=FALSE, fig.width=10 )
+```
+
+```{r load_packages}
+# make sure these are installed on your machine before knitting
+# install.packages( "dplyr" )
+# install.packages( "pander" )
+#
+# Note that you cannot knit with an install.packages() function
+# called in your RMD file. You only have to install packages
+# once, then they are loaded using the library() function.
+
+library( dplyr )
+library( pander )
+
+```
+
+
+```{r load_data}
+URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
+dat <- read.csv( URL, stringsAsFactors=FALSE )
+```
+
+```{r peek_at_data, echo=F}
+# Note that when I include the argument "echo=FALSE" in the code chunk
+# it will print the results but hide the code. 
+head( dat )
+```
+
+
+
+
+# Question 1
+
+What is the total assessed value of land in syracuse? 
+
+ANSWER: Land is valued at **$1,200,567,042**.
+
+```{r question_1}
+sum( dat$assessedla, na.rm=T )
+```
+
+
+
+
+
+
+
+
+
+

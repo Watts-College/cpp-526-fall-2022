@@ -1,0 +1,230 @@
+---
+title: "Markdown Document Overview"
+output:
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+---
+
+
+
+
+# Setup
+
+```{r setup, include=FALSE}
+
+# This code chunk sets global options for your RMD files,
+# meaning options that are applied to all code chunks.
+# 
+# RMarkdown has many settings that control how output  
+# from code chunks is presented.
+# See "cheatsheets" under "Help" for examples.
+
+knitr::opts_chunk$set( echo=TRUE, message=FALSE, warning=FALSE, fig.width=10 )
+# Change echo=TRUE to echo=FALSE to hide all code chunks from output
+# message=F & warning=F prevent inclusion of messages in final document
+# fig.width=10 changes the default figure width from 8 inches to 10 inches
+# include=F (in chunk above) makes this chunk invisible
+```
+
+
+
+## Load Packages
+
+```{r, eval=F, echo=F}
+
+# Load all packges from a single code chunk during setup, 
+# and keep the chunk visible for reproducibility. 
+
+# We will use these packages throughout the semester:
+
+package.list <- c("data.table","haven","dplyr","pander","knitr",
+                  "scales","stargazer","ggplot2","ggthemes")
+
+install.packages( package.list )
+
+library( data.table )    # read large datasets into R
+library( haven )         # import data from Stata and SPSS
+library( dplyr )         # data wrangling
+library( pander )        # formatting output
+library( knitr )         # formatting output
+library( scales )        # formatting output
+library( stargazer )     # nice regression tables
+library( ggplot2 )       # graphics
+library( ggthemes )      # graphics
+
+
+```
+
+
+```{r load_packages}
+library( dplyr )
+library( pander )
+```
+
+
+
+```{r, echo=F}
+
+# You can also include any custom functions 
+# you have written for the project.
+
+jplot <- function( x1, x2, draw.line=T, ... )
+{
+
+	plot( x1, x2,
+	      pch=19, 
+	      col=gray(0.6, alpha = 0.5), 
+	      cex=1.5,  
+	      bty = "n",
+	      xlab=lab1, 
+	      ylab=lab2, cex.lab=1.5,
+        ... )
+
+	if( draw.line==T ){ 
+		ok <- is.finite(x1) & is.finite(x2)
+		lines( lowess(x2[ok]~x1[ok]), col="red", lwd=3 ) }
+
+}
+
+```
+
+
+
+## Load Data
+
+```{r, eval=F}
+setwd( "C:/Users/jdlecy/FolderX" )
+dat <- read.csv( "DATA.csv" )
+```
+
+
+```{r, eval=F, echo=F}
+
+# 1. When possible, use online data sources or built-in datasets instead of 
+#    loading data from a local directory. That makes it impossible for others
+#    to run your code without having dataset.
+#
+#    PRO TIP: If you are using CSV data that is stored in DropBox, 
+#    right-click on the file, select "Copy DropBox link", and
+#    use this link to read the data instead of a local load.
+#    You just need to change "dl=0" to "dl=1":
+#
+#    URL <- "https://www.dropbox.com/s/72dqe1j4b6bops2/syr_parcels.csv?dl=1"
+#    dat <- read.csv( URL, stringsAsFactors=FALSE )
+
+
+
+# 2. Preview your data up-front and after each data wrangling step.
+#
+#    d1 <- read.csv( filename1, stringsAsFactors=FALSE ) 
+#    head( d1 )
+#
+#    d2 <- read.csv( filename2, stringsAsFactors=FALSE ) 
+#    head( d2 )
+#
+#    After a merge: 
+#    d3 <- merge( d1, d2 )
+#    head( d3 )
+
+
+# BETTER THAN ABOVE: 
+
+URL <- "https://www.dropbox.com/s/72dqe1j4b6bops2/syr_parcels.csv?dl=1"
+dat <- read.csv( URL )
+head( dat )
+
+```
+
+
+
+
+
+# Question 1
+
+What is the total assessed value of land in syracuse? 
+
+ANSWER: Land is valued at **$1,200,567,042**.
+
+```{r, eval=F}
+sum( dat$assessedla, na.rm=T )
+```
+
+
+
+
+
+
+
+
+
+
+
+```{css, echo=F}
+
+# Cascading Style Sheet
+# for customizing document
+# formatting
+
+p {
+color: black;
+margin: 0 0 20px 0;
+}
+
+td {
+    padding: 3px 10px 3px 10px;
+    text-align: center;
+}
+
+table
+{ 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:80px;
+    margin-bottom:100px;
+}
+
+h1, h2{
+  margin-top:100px;
+  margin-bottom:20px;
+}
+
+H5{
+    text-align: center;
+    color: gray;
+    font-size:0.8em;
+}
+
+img {
+    max-width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+pre code {
+   display: block; 
+   padding: 0.5em;
+   margin-bottom:10px;
+}
+  
+# code {
+#   font-size: 92%;
+#   border: 10px solid #F8F8F8;
+#   margin-bottom: 2px;
+# }
+# 
+# code[class] {
+#   background-color: #F8F8F8;
+# }
+```
+

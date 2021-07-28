@@ -1,0 +1,51 @@
+---
+title: "My Doc"
+author: "John Doe"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+---
+
+
+
+
+## Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo=TRUE, message=FALSE, warning=FALSE, fig.width=10 )
+```
+
+```{r load_packages}
+# note that you cannot include an install.packages() call in an RMD file when knitting
+library( dplyr )
+library( pander )
+```
+
+
+```{r load_data}
+# load data statements here
+library( Lahman )
+data( Teams )
+ave.so <- Teams$SO / Teams$G
+```
+
+
+```{r peek_at_data, echo=F}
+head( Teams )
+```
+
+
+
+# Solution
+
+
+
+
+
+
+

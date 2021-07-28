@@ -1,0 +1,370 @@
+---
+title: 'Lab 02 - Identifying Groups'
+author: "Jamison Crawford"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: cerulean
+    highlight: haddock
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE, message=F, warning=F, fig.width=10, fig.height=6 )
+```
+
+
+
+# Data
+
+
+
+Data Dictionary: [Syracuse City Tax Parcel Data](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html) 
+
+
+## Parcel Map Files
+
+
+```{r}
+
+# Load mapping libraries
+
+library(sp)
+library(rgdal)
+library(geojsonio)
+
+```
+
+
+
+```{r, cache=TRUE}
+
+# Load the map files for Downtown Syracuse
+
+url <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/downtown-syr.geojson"
+downtown <- geojson_read(url, 
+                         what = "sp")
+
+plot(downtown,  
+     border = "gray60",
+     col = "gray80" )
+
+```
+
+
+
+**Example Solution:** Parcels with more than one acre.
+
+Highlight the selected group in red:
+
+
+
+```{r}
+
+these <- downtown$acres > 1
+
+group.colors <- ifelse(test = these, yes = "firebrick", no = "gray80")
+
+plot(downtown,  
+     border=NA, 
+     col=group.colors)
+
+```
+
+
+
+**Example Solution:** Parcels comprised of single families.
+
+
+
+```{r}
+
+unique(downtown$landuse)
+
+these <- downtown$landuse == "Single Family"
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+
+
+# Solutions
+
+
+
+## Question 1
+
+*Where are the majority of vacant lots located in the downtown? Map your results.*
+
+```{r}
+
+unique(downtown$landuse)
+
+downtown$landuse == "Vacant Land"
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+
+
+## Question 2
+
+*How many parking lots are in downtown Syracuse? Map your results.*
+
+**ANSWER:** There are [x] parking lots in downtown Syracuse.
+
+```{r}
+
+# Use function: 'sum()'
+# Use variable: 'landuse'
+
+# Assign logical output to object: 'these'
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+
+
+## Question 3
+
+*Where is new construction located in the city?. Map your results.*
+
+```{r}
+
+# Use variable: 'yearbuilt'
+# Find the number of buildings constructed during or later than 1980
+
+# Assign logical output to object: 'these'
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+*What proportion of commercial properties are built since 1980?*
+
+**ANSWER:** [X%] of commercial properties were built since 1980.
+
+```{r}
+
+# Use variable: 'landuse'
+# Use variable: 'yearbuilt'
+# Count only commercial properties with buildings constructed during or later than 1980
+
+```
+
+
+
+## Question 4
+
+*How many parcels have assessed values over $10 million? Map your results.*
+
+**ANSWER:** [X] parcels have assessed values over $10 M.
+
+```{r}
+
+# Use function: 'sum()'
+# Use variable: 'assessedval'
+
+# Assign logical output to object: 'these'
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+
+
+## Question 5
+
+*How many properties are delinquent on taxes? Map your results.*
+
+**ANSWER:** [X] properties are delinquent on taxes.
+
+```{r}
+
+# Use function: 'sum()'
+# Use variable: 'amtdelinqt'
+
+# Assign logical output to object: 'these'
+
+group.colors <- ifelse(these, "firebrick", "gray80")
+
+plot(downtown,
+     border = NA, 
+     col = group.colors)
+
+```
+
+
+
+## Question 6
+
+*What proportion of parcels have delinquent tax payments owed?*
+
+**ANSWER:** [X%] of parcels have delinquent tax payments owed.
+
+```{r}
+
+# Use function: 'mean()'
+# Use variable: 'amtdelinqt'
+
+```
+
+
+
+## Question 7
+
+*What proportion of commercial properties are delinquent on taxes?*
+*What proportion of delinquent tax bills are owed by commercial parcels?*
+
+**ANSWER:** [X%] of commercial properties are delinquent on taxes. 
+[X%] of delinquent tax bills are owed by commercial parcels.
+
+```{r}
+
+# Use function: 'mean()'
+# Use variable: 'amtdelinqt'
+# Use variable: 'landuse'
+
+```
+
+
+
+## Question 8
+
+*How many of each land use type are delinquent on taxes?*
+
+```{r}
+
+# Use function: 'table()'
+# Use variable: 'amtdelinqt'
+# Use variable: 'landuse'
+
+```
+
+
+
+-- Delete this line; delete every line below it if not attempting challenges. --
+
+
+
+-----
+
+
+
+## Challenge I
+
+*Map all of the land valued at over $1 million per acre.*
+
+**ANSWER:** There are X single family homes in Syracuse. 
+
+```{r}
+
+# Your code here
+
+```
+
+
+
+## Challenge II
+
+*Map all of the land valued at less than $500,000 per acre.*
+
+**ANSWER:** There are X single family homes in Syracuse. 
+
+```{r}
+
+# Your code here
+
+```
+
+
+
+## Challenge III
+
+*What is the total value of all of the commercial parcels in the city?*
+
+**ANSWER:** There are X single family homes in Syracuse. 
+
+```{r}
+
+# Your code here
+
+```
+
+
+
+## Challenge IV
+
+*What is the total value of all of the non-commercial parcels in the city?*
+
+**ANSWER:** There are X single family homes in Syracuse. 
+
+```{r}
+
+# Your code here
+
+```
+
+-----
+
+
+
+-- Delete this line, and every line below it, before submitting. --
+
+
+
+# Submission Instructions
+
+When you have completed your assignment, knit your RMD file to generate your rendered HTML file. **Submit both your RMD and HTML files with solutions.**
+
+Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your solution files to the appropriate lab submission link.
+
+Remember to:
+
+* name your files according to the convention: **Lab-##-LastName.Rmd**
+* show your solution - include your code.
+* do not print excessive output (like a full data set or warning messages).
+* follow appropriate style guidelines (spaces between arguments, etc.).
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples.
+
+
+
+## Problems Uploading Files
+
+> Please submit HTML and RMD files unzipped if the platform permits. 
+
+Platforms like BlackBoard and Canvas may disallow you from submitting HTML files when there is embedded computer code (they sometimes think you are trying to upload a virus!). If this happens, create a zipped folder with both the RMD and HTML files and submit that instead.
+
+
+
+## Notes on Knitting
+
+Note that when you knit a file, it starts from a blank slate. You might have packages loaded or datasets active on your local machine, so you can run code chunks fine. But when you knit you might get errors that functions cannot be located or datasets don't exist. Be sure that you have included chunks to load these in your RMD file.
+
+Your RMD file will not knit if you have errors in your code. If you get stuck on a question, just add `eval=F` to the code chunk and it will be ignored when you knit your file. That way I can give you credit for attempting the question and provide guidance on fixing the problem.

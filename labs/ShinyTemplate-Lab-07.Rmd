@@ -1,0 +1,50 @@
+---
+title: "Lab-07 Dynamic Graphics"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+```{r global, include=FALSE}
+library( dplyr )
+library( Lahman )
+data( Teams )
+ave.so <- Teams$SO / Teams$G
+```
+
+
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Select a team to highlight on the graph.
+
+```{r}
+selectInput( inputId=,
+             label=,
+             choices=,
+             selected=   
+           )
+```
+
+
+
+**Author:** Your Name Here
+
+**Date:**  `r format(Sys.time(), '%B %d, %Y')`
+
+
+
+
+Column
+-----------------------------------------------------------------------
+
+### Strikeouts on the Rise
+
+```{r}
+renderPlot({
+  
+# your code here
+  
+})
+```
+
