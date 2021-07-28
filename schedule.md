@@ -746,7 +746,7 @@ This lab is designed to introduce you to basic functions that explore datasets a
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../blob/main/labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.zip')">LAB-01 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.zip')">LAB-01 Template</a>
 
 ## Submit Solutions to Canvas
 
