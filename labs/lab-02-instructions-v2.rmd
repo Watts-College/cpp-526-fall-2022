@@ -37,7 +37,7 @@ I have provided you with a **LAB-02 RMD template**:
 
 <center>
 
-[![](images/download.png)](https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true)
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2021/blob/main/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true)
 
 </center>
 
@@ -637,6 +637,7 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 ## Markdown Trouble?
 
 If you are having problems with your RMD file, visit the [**RMD File Styles and Knitting Tips**](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html) manual.
+
 
 
 #### Notes on Knitting
