@@ -455,7 +455,7 @@ This assignment requires some combination of the following functions and operato
 * `names()`: Returns the variable names of a dataset
 * `head()`: Returns the initial values of a dataset; default is 6 rows
 * `$`: Extracts a variable from a dataset using `data$variable` syntax
-* `length()`: Returnes the total number of values in a vector
+* `length()`: Returns the total number of values in a vector
 * `dim()`: Returns the total rows and columns of a dataset, respectively
 * `nrow()`: Returns the total rows of a dataset
 * `ncol()`: Returns the total columns of a dataset
@@ -467,7 +467,7 @@ This assignment requires some combination of the following functions and operato
 
 ### Practice Data
 
-This assignement uses Downtown Syracuse tax parcel data. View the documentation **[here](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html)**.
+This assignment uses Downtown Syracuse tax parcel data. View the documentation **[here](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html)**.
 
 These data are imported using the following code.
 
