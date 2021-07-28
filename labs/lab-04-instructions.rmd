@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE, message=F, warning=F)
 
 
 
-#### [DS4PS](https://ds4ps.org/cpp-526-fall-2019/)
+#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2021/)
 
 <br>
 

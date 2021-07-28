@@ -13,7 +13,7 @@ library( dplyr )
 library( pander )
 ```
 
-#### [DS4PS](https://ds4ps.github.io//cpp-526-fall-2019/)
+#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2021/)
 
 <br>
 

@@ -200,22 +200,6 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 <style type="text/css">.pagedtable {
 overflow: auto;
 padding-left: 8px;
@@ -1723,8 +1707,8 @@ summary {
 </div>
 
 
-<div id="ds4ps" class="section level4">
-<h4><a href="https://ds4ps.org/cpp-526-fall-2019/">DS4PS</a></h4>
+<div id="cpp-526-foundations-of-data-science-i" class="section level4">
+<h4><a href="https://watts-college.github.io/cpp-526-fall-2021/">CPP 526: Foundations of Data Science I</a></h4>
 <p><br></p>
 <p><em>This lab introduces the R Shiny package, which allows you to create dynamic graphics that ask for input from the user and change based upon the selection.</em></p>
 <p>This lab builds on the previous lab, but you will now add the drop-down menu similar to the original <a href="https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?_r=0&amp;ref=baseball">NYT version</a>, and highlight season statistics from that team (the yellow line).</p>

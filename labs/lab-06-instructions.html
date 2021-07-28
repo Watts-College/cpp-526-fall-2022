@@ -200,22 +200,6 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 <style type="text/css">.pagedtable {
 overflow: auto;
 padding-left: 8px;
@@ -1723,8 +1707,8 @@ summary {
 </div>
 
 
-<div id="ds4ps" class="section level4">
-<h4><a href="https://ds4ps.github.io//cpp-526-fall-2019/">DS4PS</a></h4>
+<div id="cpp-526-foundations-of-data-science-i" class="section level4">
+<h4><a href="https://watts-college.github.io/cpp-526-fall-2021/">CPP 526: Foundations of Data Science I</a></h4>
 <p><br></p>
 <p>This lab demonstrates the process of joining two datasets through a <strong>merge()</strong> function. This is one of the most common and most important processes in data science, because it allows you to combine multiple datasets to link observations that pertain to the same individuals / cases. The deepest insights often come from bringing data together in this way.</p>
 <p>We will use the following packages for the lab:</p>
