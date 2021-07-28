@@ -742,7 +742,7 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 This lab is designed to introduce you to basic functions that explore datasets and variables.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html')">LAB-01 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB-01 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
