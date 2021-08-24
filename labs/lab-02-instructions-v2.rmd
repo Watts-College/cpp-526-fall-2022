@@ -180,7 +180,7 @@ install.packages( "sp" )
 install.packages( "rgdal" )
 ```
 
-NOTE: do not include include install package commands in your RMD chunks. Trying to install packages while knitting can cause errors. 
+NOTE: do not include `install.packages` commands in your RMD chunks. Trying to install packages while knitting can cause errors. 
 
 ```{r, eval=F}
 library( geojsonio )
@@ -204,7 +204,7 @@ plot( downtown,  border="gray50", col="gray80" )
 <br>
 
 
-#### [Data Dictionary](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html)
+#### [Data Dictionary](https://ds4ps.org/cpp-526-sum-2021/labs/syr_parcels.html)
 
 *Note, the downtown file contains a subset of the fields.*
 
@@ -273,7 +273,7 @@ The images are included so that you can check whether your logical statements ar
 
 
 
-#### 1. Where are the majority of vacant lots located in the downtown? Produce a map of your results that matches the one shown here. 
+#### 1. Where are the majority of vacant lots located in downtown Syracuse? Produce a map of your results that matches the one shown here. 
 
 > **landuse** variable 
 
@@ -748,7 +748,7 @@ sum( downtown$landuse == "apartment" )
 
 ## Missing Values
 
-When there are missing values (**_NA_**s) in a vector  you need to tell mathematical functions like **sum()** and **mean()** to ignore them, otherwise they will return NA. 
+When there are missing values (**_NA_**s) in a vector you need to tell mathematical functions like **sum()** and **mean()** to ignore them, otherwise they will return NA. 
 
 ```{r}
 x <- c( 1, 2, NA, 4 )
