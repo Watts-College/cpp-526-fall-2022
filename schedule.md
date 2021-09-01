@@ -1039,7 +1039,6 @@ Suggested:
 *Help with R graphics:*
 
 * [R Graph Gallery](https://www.r-graph-gallery.com/)  
-* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
 * [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
 * [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
 
