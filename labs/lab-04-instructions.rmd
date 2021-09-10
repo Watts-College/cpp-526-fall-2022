@@ -57,7 +57,7 @@ selectInput(
            )
 ```
 
-Shiny automatically creates an object called "input" for you. When you create a widget, shiny will perform the folowing assignment implicitly in the background:
+Shiny automatically creates an object called "input" for you. When you create a widget, shiny will perform the following assignment implicitly in the background:
 
 ```{r, eval=F}
 input$my_widget_id <- "B"  # user selected value
