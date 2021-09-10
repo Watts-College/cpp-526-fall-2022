@@ -1215,7 +1215,7 @@ But we will now add an input widget that allows users to select one team that wi
 
 Required:
 
-* [Notes on R Shiny](../raw/master/lectures/shiny-widgets.pdf)
+* [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf)
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
