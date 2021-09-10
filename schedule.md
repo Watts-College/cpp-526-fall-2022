@@ -1188,8 +1188,6 @@ Read the notes on using R Shiny **widgets** and **render** functions to accept u
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
 
-https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf
-
 <br>
 
 ## Lab
