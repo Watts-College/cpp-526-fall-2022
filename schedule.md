@@ -1282,7 +1282,7 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 The following checklist will help you stay organized in your fourth week.
 
-- [ ] Complete Assigned Readings: [Notes on R Shiny](../raw/master/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+- [ ] Complete Assigned Readings: [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 04](../labs/lab-04-instructions.html) (See Below)
 - [ ] (Recommended) Videos
