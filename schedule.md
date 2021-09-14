@@ -1187,11 +1187,9 @@ By the end of this unit you will be able to:
 Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
 
 * [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf)  
-* [Notes on R Shiny]({{site.base}}lectures/shiny-widgets.pdf)  
+* [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf)  
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
-
-
 
 <br>
 
