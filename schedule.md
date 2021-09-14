@@ -1186,7 +1186,6 @@ By the end of this unit you will be able to:
 
 Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
 
-* [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf)  
 * [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf)  
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
@@ -1218,7 +1217,7 @@ But we will now add an input widget that allows users to select one team that wi
 
 Required:
 
-* [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf)
+* [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf)  
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
@@ -1285,7 +1284,7 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 The following checklist will help you stay organized in your fourth week.
 
-- [ ] Complete Assigned Readings: [Notes on R Shiny](https://github.com/Watts-College/cpp-526-fall-2021/raw/main/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+- [ ] Complete Assigned Readings: [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 04](../labs/lab-04-instructions.html) (See Below)
 - [ ] (Recommended) Videos
