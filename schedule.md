@@ -1388,7 +1388,7 @@ You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-con
 
 Lab 05 will use data on traffic accidents in the City of Tempe:
 
-[City of Tempe Open Data](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08)  
+[City of Tempe Open Data](https://data.tempe.gov/documents/15c09734587042f9920063ee78cba68a/about)  
 
 <br>
 
