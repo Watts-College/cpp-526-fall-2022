@@ -304,7 +304,8 @@ You can create a new R Markdown file, or download the **LAB-05 RMD template**:
 
 <center>
 
-[![](images/download.png)](https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true)
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2021/blob/main/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true)
+
 
 </center>
 
