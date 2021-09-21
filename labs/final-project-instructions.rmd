@@ -19,8 +19,7 @@ library( pander )
 
 A dashboard template has been provided:
 
-[![](images/download.png)](https://www.dropbox.com/s/9l2kdaxk942q6ob/final-project-dashboard-template.rmd?dl=1)
-
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2021/blob/main/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true)
 
 
 <br><br>
