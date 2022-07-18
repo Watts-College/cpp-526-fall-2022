@@ -68,6 +68,42 @@ Submit Buttons -
 
 ** Welcome
 
+*** { @unit = "", @title = "Meet Your Instructor", @lecture, @foldout }
+
+<br>
+
+## About Your Instructor
+
+Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
+
+* Visit his [GitHub](https://github.com/jamisoncrawford) profile
+* View his [RPubs](https://rpubs.com/jamisoncrawford) portfolio
+* Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C1A5x6LCDJo?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/C1A5x6LCDJo) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:07**) Two Universities, One Course
+* (**01:06**) My Relationship to the Course
+* (**01:38**) Teaching Experience & Course Origins
+* (**02:30**) What I Do as a Data Scientist
+* (**04:10**) Want a "Hard" Skill?  Do the Work!
+* (**05:40**) Course Resources & Assignment Tips
+* (**07:21**) Resources to Learn & Resources to Ignore
+* (**09:06**) Why the "Unofficial" YouTube Channel Is Invaluable
+* (**09:44**) Weekly To-Do Checklists
+* (**10:26**) Dispute Your Irrational Beliefs on Data Science
+* (**11:18**) First Assignment: Introduce Yourself
+* (**11:33**) Express Yourself
+
+<br>
+
 *** { @unit = "", @title = "The R Toolkit", @reading, @lecture, @foldout }
 
 ## Introducing R
@@ -114,7 +150,7 @@ Each tool you'll use in this course has a corresponding image, summarized below.
 
 You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files.
 
-* Learn more abour R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+* Learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 * View R Markdown in action in the below image
 
 <br>
@@ -140,7 +176,7 @@ The following video provides a tour of the RStudio interface and key components 
 
 * What is RStudio?
 * Executing and scripting commands
-* Point-and-click and keyboard shorcuts
+* Point-and-click and keyboard shortcuts
 * Major interface components and features
 
 <br>
@@ -381,7 +417,7 @@ The following checklist will help you organize and prepare for success in this c
 - [ ] [Read the Syllabus](https://watts-college.github.io/cpp-526-fall-2021/)
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join)
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/92494/assignments/2358903) (See Below)
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
 - [ ] (Recommended) Skim Readings
 - [ ] (Recommended) Videos
 
@@ -457,7 +493,7 @@ This assignment requires some combination of the following functions and operato
 * `names()`: Returns the variable names of a dataset
 * `head()`: Returns the initial values of a dataset; default is 6 rows
 * `$`: Extracts a variable from a dataset using `data$variable` syntax
-* `length()`: Returns the total number of values in a vector
+* `length()`: Returnes the total number of values in a vector
 * `dim()`: Returns the total rows and columns of a dataset, respectively
 * `nrow()`: Returns the total rows of a dataset
 * `ncol()`: Returns the total columns of a dataset
@@ -465,7 +501,7 @@ This assignment requires some combination of the following functions and operato
     - All values in a numeric vector
     - Total `TRUE` values of a logical vector
 * `summary()`: Returns summary statistics for a dataset or individual vectors
-* `table()`: Returns a tally of the number of occurences of unique values in a vector
+* `table()`: Returns a tally of the number of occurrences of unique values in a vector
 
 ### Practice Data
 
@@ -702,7 +738,7 @@ The following checklist will help you stay organized in your first week.
 
 ## The Promise of Big, Open Data
 
-The world is simultaneously generating more data than it has ever before, as well as pushing for policies for making government data more accessible and democratic. These trends and movements is an important enabling aspect of data science, becuse it provides opportunity for real insights that can change our understanding of systems and allow us to hold institutions accountable.
+The world is simultaneously generating more data than it has ever before, as well as pushing for policies for making government data more accessible and democratic. These trends and movements is an important enabling aspect of data science, because it provides opportunity for real insights that can change our understanding of systems and allow us to hold institutions accountable.
 
 So ignoring potential problems with big and open data for now, read about two interesting cases where big and open data have offered deep insights into city planning and human nature.
 
@@ -729,7 +765,7 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 <br>
 
-**Note:** You get points on Yellowdig by interacting with content. That means creating new posts and participating in posts that your classmates create. Although your Yellowdig posts are due on a specific day, you gain points throughout the week by participating in discussions.
+**Note:** You get points on Yellowdig by interacting with content. That means creating new posts and participating in posts that your classmates create. Your Yellowdig posts are due on Friday, but you gain points throughout the week by participating in discussions.
 
 You can earn up to 20 points a week, and points reset on Fridays. You need to earn 100 points throughout the seven-week term, which means averaging 15 points a week.
 
@@ -1041,6 +1077,7 @@ Suggested:
 *Help with R graphics:*
 
 * [R Graph Gallery](https://www.r-graph-gallery.com/)  
+* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
 * [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
 * [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
 
@@ -1217,7 +1254,7 @@ But we will now add an input widget that allows users to select one team that wi
 
 Required:
 
-* [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf)  
+* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf)
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
@@ -1388,7 +1425,7 @@ You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-con
 
 Lab 05 will use data on traffic accidents in the City of Tempe:
 
-[City of Tempe Open Data](https://data.tempe.gov/documents/15c09734587042f9920063ee78cba68a/about)  
+[City of Tempe Open Data](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08)  
 
 <br>
 
@@ -1484,7 +1521,7 @@ Next week we will discuss some ways to get data into R. You can always download 
 
 API stands for "Application Programming Interface", which is computer science jargon for the protocols that allow two applications to speak to each other. If you are using your mobile phone and you want to log into your bank using an app, an API will send your user credential and password to your bank, and will return information about your balances and transactions. In other words, APIs are structured ways of sending requests back and fourth between systems. The provide permission for external users to query some parts of internal databases (e.g. what is my checking account balance?), and control what information will be returned.
 
-In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
+In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. To see some examples visit the [Data Science Toolkit](http://www.datasciencetoolkit.org) website, and test out some APIs. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
 
 The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time).
 
@@ -1494,7 +1531,7 @@ For the discussion topic this week find an example of an API that could be usefu
 
 [Tutorial on Data USA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b)
 
-You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access.
+You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Alternatively you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access.
 
 *Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.*
 

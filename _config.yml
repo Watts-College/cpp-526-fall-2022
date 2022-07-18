@@ -9,11 +9,11 @@
 # COURSE INSTRUCTOR:
 
 author:
-    name:       Jacob Young
-    github:     jacobtnyoung   # Github username for avatar
+    name:       Jamison Crawford
+    github:     jamisoncrawford   # Github username for avatar
 
 # calendly app for virtual office hours
-calendly:  'https://calendly.com/jacobtnyoung/cpp-526-student-meeting'
+calendly:  'https://calendly.com/jamisoncrawford/20min'
 
 
 
@@ -43,7 +43,7 @@ header:
 # - title: Yellowdig
 #   url: https://www.yellowdig.com/board/43114
 # - title: Canvas
-#  url: https://canvas.asu.edu/courses/92494
+#  url: https://canvas.asu.edu/courses/29528
 - title: Get Help
   url: help/
 
@@ -51,16 +51,16 @@ header:
 
 # GITHUB CONFIGURATIONS
 
-url :               "https://watts-college.github.io"
-baseurl:            "/cpp-526-fall-2021"
-course_url:         "https://watts-college.github.io/cpp-526-fall-2021/"
-title:              watts-college # don't change this
+url :               "https://ds4ps.github.io"
+baseurl:            "/cpp-526-sum-2021"
+course_url:         "https://Watts-College.github.io/cpp-526-sum-2021/"
+title:              Watts-College # don't change this
 
 github_info:
     username:          Watts-College # Github location of the course
     branch:            master
-    website-repo:      cpp-526-fall-2021
-    course-repo:       cpp-526-fall-2021
+    website-repo:      cpp-526-sum-2021
+    course-repo:       cpp-526-sum-2021
 
 
 

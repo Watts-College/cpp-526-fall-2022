@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class = "uk-container uk-container-small">
-  
+
 <br>
 <br>
 <hr>
@@ -11,7 +11,7 @@ layout: default
 
 **Join the MS-PEDA Community**
 
-Join the MS-PEDA groups on Linked-In or Facebook to meet alumni and stay connected to the program. 
+Join the MS-PEDA groups on Linked-In or Facebook to meet alumni and stay connected to the program.
 
 <a class="uk-button uk-button-primary" onclick="window.open('https://www.linkedin.com/groups/13977637/')"> LinkedIn Group </a>
 
@@ -32,9 +32,9 @@ Just like learning a new language, there is no way to become fluent in a semeste
 
 ## R Cheat Sheets
 
-Cheat sheets are parsimonious and stylized notes that help organizat functions and syntax so it is easier to learn and find. R Studio has an extensive list of [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/) that you might find helpful.
+Cheat sheets are parsimonious and stylized notes that help organize functions and syntax so it is easier to learn and find. R Studio has an extensive list of [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/) that you might find helpful.
 
-[R Studio Resources for Beginners](https://education.rstudio.com/) 
+[R Studio Resources for Beginners](https://education.rstudio.com/)
 
 ## R Exercises
 
@@ -46,29 +46,29 @@ Tutorials from Rexercises [ [link](https://www.r-exercises.com/start-here-to-lea
 
 Pete Warden created one of the first **data science toolkits**, which was a collection of open-source tools for common tasks in data science like turning street addresses into geo-coordinates, extracting sentiments from text, and identifying people's names in documents. The original toolkit started out as a simple website with a couple of dozen of these tools (the original website is defunct but you can still use the tools through the [RDSTK Package](https://cran.r-project.org/web/packages/RDSTK/RDSTK.pdf) ).
 
-The R community has taken this to another scale. There are currently 13,000 free and open-source packages available in R. It is better to think about R as an operating system, and the contributed packages as the programs you use for specific tasks. 
+The R community has taken this to another scale. There are currently 13,000 free and open-source packages available in R. It is better to think about R as an operating system, and the contributed packages as the programs you use for specific tasks.
 
 In addition to packages created for R, there are also powerful tools that make it easier to share data, collaborate on work, and share your results in creative ways. One of the reasons R has become an industry favorite is that it is highly integrated into this ecosystem. Many of these tools are built-right into R Studio, making it easier to manage large projects or collaborate.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/data-science-ecosystem.png" 
+<img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/data-science-ecosystem.png"
 alt="The DS ECO" width="400" align="center" />
 </p>
 
-A big part of this course is learning about some of these resources and how they fit together to improve work-flow, analysis, and reporting. The most powerful tool that you will discover, however, is the community of smart and creative people active in the field of data science. Some are engineers working on solutions to hard technical problems in the open source space, but most are regular users such as data analysts, artists, educators and activists. Once you understand a few foundational concepts and develop a rudimentary vocabulary you can tap into the community through message boards and list-serves. See the Get Help tab for rules to follow as a good community member. 
+A big part of this course is learning about some of these resources and how they fit together to improve work-flow, analysis, and reporting. The most powerful tool that you will discover, however, is the community of smart and creative people active in the field of data science. Some are engineers working on solutions to hard technical problems in the open source space, but most are regular users such as data analysts, artists, educators and activists. Once you understand a few foundational concepts and develop a rudimentary vocabulary you can tap into the community through message boards and list-serves. See the Get Help tab for rules to follow as a good community member.
 
 ## Data-Driven Documents
 
-For the purpose of transparency and reproducibility, as well as simple convenience, there is high demand for documents that combine typical elements of publications and reports such as text, tables, graphs and images, and the code that was used to create the analysis presented in the text. These efforts have largely converged on Markdown as a simple publishing language, and derivations like R Markdown to incorporate output from models into documents. 
+For the purpose of transparency and reproducibility, as well as simple convenience, there is high demand for documents that combine typical elements of publications and reports such as text, tables, graphs and images, and the code that was used to create the analysis presented in the text. These efforts have largely converged on Markdown as a simple publishing language, and derivations like R Markdown to incorporate output from models into documents.
 
-Markdown is a simple set of rules used to format text and images. Formatting it accomplished by adding tags to text. 
+Markdown is a simple set of rules used to format text and images. Formatting it accomplished by adding tags to text.
 
 ```
 # H1
 ## H2
 ### H3
 ```
-<img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/markdown-example.png" 
+<img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/markdown-example.png"
 alt="markdown" width="200" />
 
 The basics are very easy to master by referencing a basic [Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
@@ -78,21 +78,21 @@ But don't let the simplicity fool you. Markdown documents are extremely versatil
 R Studio makes it easy to create R Markdown documents, and you can select the format by changing the output type. Perhaps you have a regular report created as an HTML page:   
 
 ```
---- 
+---
 output: html_document
 ---
 ```
 And you want to re-organize the material into a dashboard. Simply change the output type:
 
 ```
---- 
+---
 output: flexdashboard
 ---
 ```
 
 Then add a few page dividers, and your analysis will now be organized something like this [StoryBoard](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html).
 
-Markdown is used on GitHub, Stack Overflow, and in R Markdown documents. Familiarity with the basics offers a lot of power in controlling how your analysis is presented to your audience. 
+Markdown is used on GitHub, Stack Overflow, and in R Markdown documents. Familiarity with the basics offers a lot of power in controlling how your analysis is presented to your audience.
 
 You can see some advanced R Markdown features [HERE](https://ds4ps.github.io/Data-Science-Class/HANDOUTS/R_Markdown_Template.html).
 
@@ -114,7 +114,7 @@ Working in groups [is hard](https://www.ted.com/talks/clay_shirky_on_institution
 
 ### Install GitHub in R Studio
 
-This course will introduce students to [GitHub](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github), one of the most popular collaboration and publishing platforms used by the open source community. GitHub is integrated into R Studio for easy deployment. 
+This course will introduce students to [GitHub](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github), one of the most popular collaboration and publishing platforms used by the open source community. GitHub is integrated into R Studio for easy deployment.
 
 
 <br>
@@ -133,13 +133,13 @@ Here are some resources for configuring GitHub to work with R Studio:
 ## Installing R
 
 
-R is a programming langauge that was [designed specifically for data analysis](https://www.nytimes.com/2009/01/07/technology/business-computing/07program.html). Along with Python, it is the [most popular tool](https://stackoverflow.blog/2017/10/10/impressive-growth-r/) used by data scientists, data journalists, and quantitative social scientists. 
+R is a programming language that was [designed specifically for data analysis](https://www.nytimes.com/2009/01/07/technology/business-computing/07program.html). Along with Python, it is the [most popular tool](https://stackoverflow.blog/2017/10/10/impressive-growth-r/) used by data scientists, data journalists, and quantitative social scientists.
 
 **R in 60 Seconds:**
 
 <br>
 <p align="center">
-<a href="https://vimeo.com/180644880" target="_blank"><img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/R-in-60-seconds.png" 
+<a href="https://vimeo.com/180644880" target="_blank"><img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/R-in-60-seconds.png"
 alt="R in 60 seconds" width="854" border="0" /></a>
 </p>
 <br>
@@ -187,8 +187,3 @@ For those that are new to data science, I have compiled some useful resources fo
 
 </div>
 <br><br><br>
-
-
-
-
-

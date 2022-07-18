@@ -21,15 +21,15 @@ info:
  discussion_board_url: 'https://watts-college.github.io/cpp-526-fall-2021/help/'
 
 instructor:
--  name: Jacob Young
+-  name: YOUR NAME
    title: Instructor
-   email: CPP526@asu.edu
+   email: EMAIL@asu.edu
    office_location:
-   website_url: 'https://jacobtnyoung.github.io/'
-   github_url: 'https://github.com/jacobtnyoung'
-   twitter_url: 'https://twitter.com/jacobtnyoung'
-   #scholar_url:
-   #linked_in_url:
+   website_url:
+   github_url:  
+   twitter_url:
+   scholar_url:
+   linked_in_url:
    office_hours_time: See Schedule
    office_hours_app_url: 'https://calendly.com/jacobtnyoung/cpp-526-student-meeting'
    office_hours_location: Zoom
@@ -149,11 +149,11 @@ You will be much better off spending a small amount of time each day on the mate
 
 Online discussion boards are design for students to engage with the material together. The purpose of online discussion sessions is threefold: (1) the online discussion sessions allow students to interact with their peers and share ideas and interpretations of the assigned material, (2) such peer-to-peer discussion online helps build professional relationships with potential future colleagues in the field, and (3) the discussions permit the instructor to assess student engagement with the assigned material.
 
-The online discussions are explicitly intended to meet the objectives stated above.  They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that.  Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
+The online discussions are explicitly intended to meet the objectives stated above. They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that. Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
 
 ### Video Lectures
 
-Several videos are provided throughout the course.  They are not mandatory viewing, however we have recently integrated them into the Course Schedule and elsewhere to provide an additional medium for audio-visual learning in demonstrating core concepts.  We recommend reproducing the data analytic tasks you see while watching each in order to ensure retention.  Video lectures are designed as a supplement and not intended for use in lieu of assigned reading.  Take advantage of the bookmarks and timestamps to quickly navigate to topics of interest in each video and consider subscribing as new course content is published frequently.
+Several videos are provided throughout the course. They are not mandatory viewing, however we have recently integrated them into the Course Schedule and elsewhere to provide an additional medium for audio-visual learning in demonstrating core concepts. We recommend reproducing the data analytic tasks you see while watching each in order to ensure retention. Video lectures are designed as a supplement and not intended for use in lieu of assigned reading. Take advantage of the bookmarks and timestamps to quickly navigate to topics of interest in each video and consider subscribing as new course content is published frequently.
 
 ## B. Assigned Reading Materials
 
@@ -225,7 +225,7 @@ YellowDig discussion topics are used to introduce you to the data science ecosys
   - **Comments Made:** Creating a comment on another pin **(2 pts)**
   - **Likes:** Liking another pin **(1 pt)**
 
-These points atuomatically update on *Canvas*. The total grade is cumulative, reflecting points contributing to 100%. **A maximum of 20 points can be earned in each week's discussions.**  
+These points automatically update on *Canvas* and are manually updated on *iCollege*. The total grade is cumulative, reflecting points contributing to 100%. **A maximum of 20 points can be earned in each week's discussions.**  
 
 *Earning an "Instructor Badge" nets an additional 5 points.*
 
@@ -248,11 +248,11 @@ Grades for the course are largely based on weekly labs. Assigned work is accompa
 
 ## F. Course Communications and Instructor Feedback:
 
-**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [**Canvas shell**](https://canvas.asu.edu/courses/92494).
+**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [**Canvas shell**](https://canvas.asu.edu/courses/88304).
 
 Please post lab questions on the [**Get Help**](https://watts-college.github.io/cpp-526-fall-2021/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system.
 
-Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 business days.
+Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
 ## G. Student Conduct: Expectation of Professional Behavior
 
