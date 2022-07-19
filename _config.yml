@@ -5,16 +5,14 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 
-
 # COURSE INSTRUCTOR:
 
 author:
-    name:       Jamison Crawford
-    github:     jamisoncrawford   # Github username for avatar
+    name:       Jacob Young
+    github:     jacobtnyoung   # Github username for avatar
 
 # calendly app for virtual office hours
-calendly:  'https://calendly.com/jamisoncrawford/20min'
-
+calendly:  'https://calendly.com/jacobtnyoung/cpp-526-student-meeting'
 
 
 # COURSE INFO:
@@ -43,40 +41,30 @@ header:
 # - title: Yellowdig
 #   url: https://www.yellowdig.com/board/43114
 # - title: Canvas
-#  url: https://canvas.asu.edu/courses/29528
+#  url: https://canvas.asu.edu/courses/124826
 - title: Get Help
   url: help/
 
 
-
 # GITHUB CONFIGURATIONS
 
-url :               "https://ds4ps.github.io"
-baseurl:            "/cpp-526-sum-2021"
-course_url:         "https://Watts-College.github.io/cpp-526-sum-2021/"
+url :               "https://watts-college.github.io"
+baseurl:            "/cpp-526-fall-2022"
+course_url:         "https://watts-college.github.io/cpp-526-fall-2022/"
 title:              Watts-College # don't change this
 
 github_info:
     username:          Watts-College # Github location of the course
     branch:            master
-    website-repo:      cpp-526-sum-2021
-    course-repo:       cpp-526-sum-2021
-
-
-
-
-
-
-
+    website-repo:      cpp-526-fall-2022
+    course-repo:       cpp-526-fall-2022
 
 
 
 # IGNORE THESE SETTINGS
 
-
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink:          /:title/
-
 
 # Social icons displayed in footer
 social:
@@ -96,7 +84,6 @@ social:
 
 # Twitter share button
 twitter_username:
-
 
 # Disqus comments shortname, requires Disqus account https://disqus.com/
 disqus:

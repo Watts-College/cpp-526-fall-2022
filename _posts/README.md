@@ -4,7 +4,7 @@ This page shows in detailed information regarding the dataset, a more detailed i
 ```
 YEAR-MONTH-DAY-title.md
 ```
-Where the date should be in yyyy-mm-dd-title format, it is preferred to enter current date as the post are sorted on the basis of date so by giving it current date it will show that post fist in the datset page.
+Where the date should be in yyyy-mm-dd-title format, it is preferred to enter current date as the post are sorted on the basis of date so by giving it current date it will show that post fist in the dataset page.
 
 In the post.md file there are two types data to be entered:
 

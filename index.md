@@ -13,21 +13,21 @@ info:
  course_title: Foundations of Data Science Part I
  course_number: CPP 526
  course_level: Graduate
- course_website: 'https://canvas.asu.edu/courses/92494'
- course_start_end_dates: August 19 - October 8, 2021
+ course_website: 'https://canvas.asu.edu/courses/124826'
+ course_start_end_dates: August 18 - October 7, 2022
  course_prerequisites:  
  class_meets_when:  Asynchronous  
  class_meets_where:  Online
- discussion_board_url: 'https://watts-college.github.io/cpp-526-fall-2021/help/'
+ discussion_board_url: 'https://watts-college.github.io/cpp-526-fall-2022/help/'
 
 instructor:
--  name: YOUR NAME
+-  name: Jacob Young
    title: Instructor
-   email: EMAIL@asu.edu
+   email: CPP526@asu.edu
    office_location:
-   website_url:
-   github_url:  
-   twitter_url:
+   website_url: 'https://jacobtnyoung.github.io/'
+   github_url: 'https://github.com/jacobtnyoung'
+   twitter_url: 'https://twitter.com/jacobtnyoung'
    scholar_url:
    linked_in_url:
    office_hours_time: See Schedule
@@ -248,9 +248,9 @@ Grades for the course are largely based on weekly labs. Assigned work is accompa
 
 ## F. Course Communications and Instructor Feedback:
 
-**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [**Canvas shell**](https://canvas.asu.edu/courses/88304).
+**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [**Canvas shell**](https://canvas.asu.edu/courses/124826).
 
-Please post lab questions on the [**Get Help**](https://watts-college.github.io/cpp-526-fall-2021/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system.
+Please post lab questions on the [**Get Help**](https://watts-college.github.io/cpp-526-fall-2022/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system.
 
 Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
@@ -284,7 +284,7 @@ As students are all aware, ASU Online courses are typically offered on a seven a
 
 **Note:** The course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-Visit the [**Course Schedule**](https://watts-college.github.io/cpp-526-fall-2021/schedule/).
+Visit the [**Course Schedule**](https://watts-college.github.io/cpp-526-fall-2022/schedule/).
 
 <br>
 <br>
