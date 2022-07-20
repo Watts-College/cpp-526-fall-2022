@@ -469,7 +469,7 @@ This assignment requires some combination of the following functions and operato
 
 ### Practice Data
 
-This assignment uses Downtown Syracuse tax parcel data. View the documentation **[here](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html)**.
+This assignment uses Downtown Syracuse tax parcel data. View the documentation **[here](../labs/syr_parcels.html)**.
 
 These data are imported using the following code.
 
