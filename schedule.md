@@ -1041,7 +1041,6 @@ Suggested:
 *Help with R graphics:*
 
 * [R Graph Gallery](https://www.r-graph-gallery.com/)  
-* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
 * [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
 * [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
 
@@ -1107,7 +1106,7 @@ The following checklist will help you stay organized in your third week.
 
 ## R Graphics Packages
 
-This week you will begin working in the core R graphics engine. This discussion topic offers an opportunity to explore some of the myriad [graphics packages in R](https://cran.r-project.org/web/views/Graphics.html).
+This week you will begin working in the core R graphics engine. This discussion topic offers an opportunity to explore some of the myriad graphics packages in R.
 
 Your task is to select a specialized graphic that you could use in your own (hypothetical) research or professional life, then describe what data or topic from your own work the visualization would be useful for. Reference the R package you would need for the task.
 
@@ -1389,7 +1388,7 @@ You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-con
 
 Lab 05 will use data on traffic accidents in the City of Tempe:
 
-[City of Tempe Open Data](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08)  
+[City of Tempe Open Data](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)  
 
 <br>
 
@@ -1485,7 +1484,7 @@ Next week we will discuss some ways to get data into R. You can always download 
 
 API stands for "Application Programming Interface", which is computer science jargon for the protocols that allow two applications to speak to each other. If you are using your mobile phone and you want to log into your bank using an app, an API will send your user credential and password to your bank, and will return information about your balances and transactions. In other words, APIs are structured ways of sending requests back and fourth between systems. The provide permission for external users to query some parts of internal databases (e.g. what is my checking account balance?), and control what information will be returned.
 
-In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. To see some examples visit the [Data Science Toolkit](http://www.datasciencetoolkit.org) website, and test out some APIs. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
+In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
 
 The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time).
 
