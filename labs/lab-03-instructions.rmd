@@ -15,7 +15,7 @@ library( dplyr )
 library( pander )
 ```
 
-#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2021/)
+#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2022/)
 
 <br>
 
@@ -25,7 +25,7 @@ You can create a new R Markdown file, or download the **LAB-03 RMD template**:
 
 <center>
 
-[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2021/blob/main/labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.zip?raw=true)
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2022/blob/main/labs/cpp-526_reformatted-labs/Lab-03-LastName.zip?raw=true)
 
 </center>
 
