@@ -906,7 +906,7 @@ The following checklist will help you stay organized in your second week.
 
 ## A Tour of R Packages
 
-You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is [nothing hotter](http://www.startfactor.pt/uploads/3/8/5/0/38505347/r-is-still-hot.pdf) than learning R.
+You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is nothing hotter than learning R.
 
 But what is R, and what are the ~~nerds~~ cool kids using it for?
 
@@ -916,7 +916,7 @@ Mine, personally, was the package that allows you to create comic strip graphics
 
 [xkcd comics](https://stackoverflow.com/questions/12675147/how-can-we-make-xkcd-style-graphs)
 
-Take note, this assignment asks you to explore a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 15,000 packages available in R! Part of the goal of the assignment is to recognize the sheer volume of creativity in the R community and the scope of work that can be done with the language. But the immediate learning objective is to find some sources that make the content accessible. Here are a few to get you started:
+Take note, this assignment asks you to explore a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 18,000 packages available in R! Part of the goal of the assignment is to recognize the sheer volume of creativity in the R community and the scope of work that can be done with the language. But the immediate learning objective is to find some sources that make the content accessible. Here are a few to get you started:
 
 [awesome r](https://github.com/qinwf/awesome-R)
 
