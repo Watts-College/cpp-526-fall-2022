@@ -748,7 +748,7 @@ This lab is designed to introduce you to basic functions that explore datasets a
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.zip')">LAB-01 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-01_LastName.zip')">LAB-01 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -962,7 +962,7 @@ The rest of the chapter is useful information to come back to, but not needed fo
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true')">LAB-02 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-02-LastName.zip?raw=true')">LAB-02 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1140,7 +1140,7 @@ Code is provided to get you started, but you will have to use documentation and 
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-03-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1330,7 +1330,7 @@ Click to download the lab template.
 
 **Note:** Rather than submitting a PDF or HTML file, please submit only the R or R Markdown file.  *Please ignore the boilerplate directions in this week's assignment*.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.zip?raw=true')">LAB-04 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-04-LastName.zip?raw=true')">LAB-04 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1519,7 +1519,7 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true')">LAB-05 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-05-LastName.zip?raw=true')">LAB-05 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1684,7 +1684,7 @@ This lab is designed to introduce you to primary data join functions in R.
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true')">LAB-06 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-06-LastName.zip?raw=true')">LAB-06 Template</a>
 
 ## Submit Solutions to Canvas
 
