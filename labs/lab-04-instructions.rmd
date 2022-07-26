@@ -146,7 +146,7 @@ To get started, download the **Lab-04 RMD template**:
 
 <center>
 
-[![](images/download.png)](https://github.com/DS4PS/cpp-526-fall-2022/blob/master/labs/cpp-526_reformatted-labs/Lab-04-LastName.zip?raw=true)
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2022/blob/main/labs/cpp-526_reformatted-labs/Lab-04-LastName.zip?raw=true)
 
 </center>
 
