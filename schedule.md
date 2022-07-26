@@ -958,7 +958,7 @@ The rest of the chapter is useful information to come back to, but not needed fo
 
 *Similar to last week, the chapter highlights some easy ways to make errors with your code. We don't want to convince you that R is hard, but rather to ensure that you are paying attention to some subtle features of machine language that can impact your data.*
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions-v2.html')">LAB-02 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB-02 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
