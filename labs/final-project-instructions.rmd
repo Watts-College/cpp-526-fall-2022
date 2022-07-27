@@ -297,7 +297,7 @@ Remember to:
 
 # Data
 
-You will use the traffic accidents dataset (from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)) that was used in Lab 05:  
+You will use the traffic accidents dataset (from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)) that was used in Lab-05:  
 
 ```{r, echo=T}
 URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
