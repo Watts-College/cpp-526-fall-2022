@@ -45,7 +45,7 @@ knitr::opts_chunk$set(echo = TRUE,
 The following report analyzes tax parcel data from Syracuse, New York (USA).
 
 View the "Data Dictionary" here: 
-[**Syracuse City Tax Parcel Data**](http://data.syrgov.net/datasets/1b346804e1364a5eb85ccb53302e3c91_0)
+[**Syracuse City Tax Parcel Data**](https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html)
 
 <br>
 <br>
