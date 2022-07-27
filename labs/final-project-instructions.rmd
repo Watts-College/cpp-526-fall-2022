@@ -13,20 +13,20 @@ library( dplyr )
 library( pander )
 ```
 
-#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2021/)
+#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2022/)
 
 <br>
 
 A dashboard template has been provided:
 
-[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2021/blob/main/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true)
+[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2022/blob/main/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true)
 
 
 <br><br>
 
 # Data
 
-You will again use the traffic accidents dataset from the Tempe Open Data Portal. The details of the dataset are reported at the end of these instructions. 
+You will again use the traffic accidents dataset from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about). The details of the dataset are reported at the end of these instructions. 
 
 
 
@@ -47,13 +47,13 @@ The template currently provides:
 
 Using these input widgets, the user should be able to define a query that selects a specific time-period (weekends, afternoon rush-hour, etc.) and the map should display the correct data.
 
-The second tab allows the user to explore the prevelance and severity of different types of accidents by driver characteristics.
+The second tab allows the user to explore the prevalence and severity of different types of accidents by driver characteristics.
 
 * Age
 * Gender
 * Driver, pedestrian, or cyclist
 
-The template includes 4 [value boxes](https://rmarkdown.rstudio.com/flexdashboard/using.html#value_boxes) at the top of the page to report statistics for each user query:
+The template includes four value boxes at the top of the page to report statistics for each user query:
 
 * Number of crashes
 * Rate of harm (at least one person injured or killed)
@@ -128,7 +128,8 @@ Conditions at the time of accident:
 * Surface
 * Junction
 
-Impairement?
+Impairement?  
+
 * Alcohol or drugs 
 * Violations issued
 
@@ -296,13 +297,14 @@ Remember to:
 
 # Data
 
-You will use a traffic accidents dataset from the Tempe Open Data Portal, available at:
+You will use the traffic accidents dataset (from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)) that was used in Lab 04 and Lab 05:  
 
-https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08
+```{r, echo=T}
+URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
+dat <- readRDS( gzcon( url( URL ) ) )
+```
 
-You will download the "Crash Data" CSV dataset, store it on your machine, and read it into R using the read.csv() fuction.
-
-The dataset contains the following variables:
+Recall that the dataset contains the following variables:
 
 
 |column              |type      |label                      |description                                                                                                                 |

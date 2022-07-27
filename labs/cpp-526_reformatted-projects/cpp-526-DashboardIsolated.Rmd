@@ -20,16 +20,16 @@ runtime: shiny
 
 # LOAD PACKAGES
 
-library(DT)
-library(ggmap)
-library(shiny)
-library(knitr)
-library(pander)
-library(leaflet)
-library(viridis)
-library(rsconnect)
-library(tidyverse)
-library(flexdashboard)
+library( DT )
+library( ggmap )
+library( shiny )
+library( knitr )
+library( pander )
+library( leaflet )
+library( viridis )
+library( rsconnect )
+library( tidyverse )
+library( flexdashboard )
 
 
 
@@ -39,7 +39,7 @@ url <- paste0("https://github.com/DS4PS/Data-",
               "Science-Class/blob/master/DATA",
               "/TempeTrafficAccidents.rds?raw=true")
 
-dat <- readRDS(gzcon(url(url)))
+dat <- readRDS( gzcon( url( url ) ) )
 
 
 
