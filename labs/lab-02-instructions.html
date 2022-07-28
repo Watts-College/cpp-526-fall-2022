@@ -11,7 +11,7 @@
 
 
 
-<title>Lab 02 - Selecting Groups Within Data</title>
+<title>Lab 02 - Constructing Groups</title>
 
 <script src="lab-02-instructions_files/header-attrs-2.11/header-attrs.js"></script>
 <script src="lab-02-instructions_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -248,7 +248,7 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">Lab 02 - Selecting Groups Within Data</h1>
+<h1 class="title toc-ignore">Lab 02 - Constructing Groups</h1>
 
 </div>
 
@@ -334,7 +334,7 @@ src="images/download.png" /></a></p>
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>This lab uses <a
-href="https://ds4ps.org/cpp-526-sum-2021/labs/syr_parcels.html"><strong>city
+href="https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html"><strong>city
 tax parcel data</strong></a>, and open dataset released by the municipal
 government of Syracuse, NY.</p>
 <ul>
@@ -376,7 +376,7 @@ errors.</p>
 </div>
 <div id="data-dictionary" class="section level4">
 <h4><a
-href="https://ds4ps.org/cpp-526-sum-2021/labs/syr_parcels.html">Data
+href="https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html">Data
 Dictionary</a></h4>
 <p><em>Note, the downtown file contains a subset of the fields.</em></p>
 <table>
@@ -902,7 +902,7 @@ class="section level4">
 results.</h4>
 <blockquote>
 <p>use the <strong>sum()</strong> function with
-<strong>assessedval</strong> variable;</p>
+<strong>assessedval</strong> variable</p>
 </blockquote>
 <p><img src="lab-02-instructions_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
 <p><br></p>
@@ -912,7 +912,8 @@ class="section level4">
 <h4>5. How many properties are delinquent on taxes? Map your
 results.</h4>
 <blockquote>
-<p><strong>sum()</strong> with the <strong>amtdelinqt</strong>;</p>
+<p><strong>sum()</strong> with the <strong>amtdelinqt</strong>
+variable</p>
 </blockquote>
 <p><img src="lab-02-instructions_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
 <p><br></p>
@@ -935,19 +936,21 @@ What proportion of delinquent tax bills are owed by commercial
 parcels?</h4>
 <blockquote>
 <p><strong>mean()</strong> with <strong>amtdelinqt</strong> and
-<strong>landuse</strong> variables define your groups with compound
-statements first then calculate proportions</p>
+<strong>landuse</strong> variables: define your groups with compound
+statements first, then calculate proportions</p>
 </blockquote>
 <p><img src="lab-02-instructions_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
 <p><br></p>
 </div>
-<div id="how-many-of-each-land-use-type-are-delinquent-on-taxes"
+<div
+id="how-many-of-each-land-use-type-are-delinquent-on-taxes-print-a-table-of-your-results."
 class="section level4">
-<h4>8. How many of each land use type are delinquent on taxes?</h4>
+<h4>8. How many of each land use type are delinquent on taxes? Print a
+table of your results.</h4>
 <blockquote>
 <p><strong>table()</strong> with <strong>amtdelinqt</strong> and
-<strong>landuse</strong> variables define delinquency first, then create
-a table with landuse and delinquency</p>
+<strong>landuse</strong> variables: define delinquency first, then
+create a table with landuse and delinquency</p>
 </blockquote>
 <p><br> <br></p>
 <hr />
@@ -961,9 +964,9 @@ acre.</strong></p>
 acre.</strong></p>
 <p><img src="lab-02-instructions_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
 <p><strong>What is the total value of all of the commercial parcels in
-the city?</strong></p>
+downtown Syracuse?</strong></p>
 <p><strong>What is the total value of all of the non-commercial parcels
-in the city?</strong></p>
+in downtown Syracuse?</strong></p>
 <p><img src="lab-02-instructions_files/figure-html/unnamed-chunk-22-1.png" width="960" /></p>
 <hr />
 <p><br></p>
@@ -1116,7 +1119,7 @@ visited the special exhibit.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what was the average donation made to the special exhibit? </span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>( x, <span class="at">na.rm=</span>T )</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if we know that 200 people will visit the meseum this weekend,</span></span>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if we know that 200 people will visit the museum this weekend,</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># how much do we expect the special exhibit to raise? </span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># people visiting x average donation</span></span>
@@ -1151,7 +1154,7 @@ more precisely:</p>
 by the average donation of those that attended the exhibit, a subset of
 all visitors. We will greatly over-estimate the expected event revenue
 as a result.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if we know that 200 people will visit the meseum this weekend,</span></span>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if we know that 200 people will visit the museum this weekend,</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># how much do we expect the special exhibit to raise? </span></span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co"># people visiting x average donation per person</span></span>
@@ -1169,7 +1172,7 @@ consider how many museum visitors will attend the exhibit:</p>
 <pre><code>## [1] 1125</code></pre>
 <p>Missing values serve a very important function in statistics, because
 they force the analyst to decide whether we can ignore them completely,
-or whether the need to be interpretted if we want the model to be
+or whether the need to be interpreted if we want the model to be
 accurate. So when you get this:</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>( x )</span></code></pre></div>
 <pre><code>## [1] NA</code></pre>

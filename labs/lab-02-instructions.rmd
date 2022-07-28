@@ -1,5 +1,5 @@
 ---
-title: 'Lab 02 - Selecting Groups Within Data'
+title: 'Lab 02 - Constructing Groups'
 output:
   html_document:
     theme: readable
@@ -69,7 +69,7 @@ compound statements with & (AND) and | (OR) operators
 
 ## Data
 
-This lab uses [**city tax parcel data**](https://ds4ps.org/cpp-526-sum-2021/labs/syr_parcels.html), and open dataset released by the municipal government of Syracuse, NY. 
+This lab uses [**city tax parcel data**](https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html), and open dataset released by the municipal government of Syracuse, NY. 
 
 * Each house, business, park or empty lot in the city sits on a parcel of land, and the tax rate for that parcel is determined by the city. 
 * All of the characteristics of each parcel is stored in a central database, along with information about the land use classifications, owners, and whether the property is up-to-date on taxes and water bills.  
@@ -204,7 +204,7 @@ plot( downtown,  border="gray50", col="gray80" )
 <br>
 
 
-#### [Data Dictionary](https://ds4ps.org/cpp-526-sum-2021/labs/syr_parcels.html)
+#### [Data Dictionary](https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html)
 
 *Note, the downtown file contains a subset of the fields.*
 
@@ -470,18 +470,12 @@ plot( downtown,  border=group.colors, lwd=3,
 
 
 
-
-
-
-
-
-
 <br>
 
  
 #### 4. How many parcels have assessed values over $10 million? Map your results. 
 
-> use the **sum()** function with **assessedval** variable;  
+> use the **sum()** function with **assessedval** variable  
 
 
 ```{r, echo=F, fig.height=7, eval=T}
@@ -498,7 +492,7 @@ plot( downtown,  border="gray70", col=group.colors,
     
 #### 5. How many properties are delinquent on taxes? Map your results. 
 
-> **sum()** with the **amtdelinqt**;
+> **sum()** with the **amtdelinqt** variable
 
 
 ```{r, echo=F, fig.height=7, eval=T}
@@ -524,8 +518,8 @@ plot( downtown,  border="gray70", col=group.colors,
 
 #### 7. What proportion of commercial properties are delinquent on taxes? What proportion of delinquent tax bills are owed by commercial parcels? 
 
-> **mean()** with **amtdelinqt** and **landuse** variables
-> define your groups with compound statements first
+> **mean()** with **amtdelinqt** and **landuse** variables:
+> define your groups with compound statements first,
 > then calculate proportions 
 
 ```{r, echo=F, fig.width=10, fig.height=6, eval=T}
@@ -546,9 +540,9 @@ plot( downtown,  border="gray70", col=group.colors,
 <br>
 
 
-#### 8. How many of each land use type are delinquent on taxes? 
+#### 8. How many of each land use type are delinquent on taxes? Print a table of your results. 
 
-> **table()** with **amtdelinqt** and **landuse** variables
+> **table()** with **amtdelinqt** and **landuse** variables:
 > define delinquency first, then create a table with
 > landuse and delinquency
 
@@ -586,9 +580,9 @@ plot( downtown,  border="gray95", col=group.colors,
 ```
 
 
-**What is the total value of all of the commercial parcels in the city?**
+**What is the total value of all of the commercial parcels in downtown Syracuse?**
 
-**What is the total value of all of the non-commercial parcels in the city?**
+**What is the total value of all of the non-commercial parcels in downtown Syracuse?**
 
 
 ```{r, echo=F, fig.height=6}
@@ -772,7 +766,7 @@ sum( x, na.rm=T )
 # what was the average donation made to the special exhibit? 
 mean( x, na.rm=T )
 
-# if we know that 200 people will visit the meseum this weekend,
+# if we know that 200 people will visit the museum this weekend,
 # how much do we expect the special exhibit to raise? 
 #
 # people visiting x average donation
@@ -813,7 +807,7 @@ sum( x, na.rm=T ) / sum( x >= 0, na.rm=T )
 Our initial estimate was incorrect. We multiplied all museum visitors by the average donation of those that attended the exhibit, a subset of all visitors. We will greatly over-estimate the expected event revenue as a result.  
 
 ```{r}
-# if we know that 200 people will visit the meseum this weekend,
+# if we know that 200 people will visit the museum this weekend,
 # how much do we expect the special exhibit to raise? 
 #
 # people visiting x average donation per person
@@ -833,7 +827,7 @@ To get an accurate estimate of the special event revenues we need to consider ho
 200 * ( sum( x, na.rm=T ) / length(x) )
 ```
  
-Missing values serve a very important function in statistics, because they force the analyst to decide whether we can ignore them completely, or whether the need to be interpretted if we want the model to be accurate. So when you get this: 
+Missing values serve a very important function in statistics, because they force the analyst to decide whether we can ignore them completely, or whether the need to be interpreted if we want the model to be accurate. So when you get this: 
 
 ```{r}
 mean( x )

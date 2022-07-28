@@ -1,5 +1,5 @@
 ---
-title: "Lab 02 - Identifying Groups"
+title: "Lab 02 - Constructing Groups"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 The following report identifies specific tax parcels in Downtown Syracuse, New York (USA).
 
-View the dataset documentation here: [Syracuse, NY Tax Parcel Data](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html).
+View the dataset documentation here: [Syracuse, NY Tax Parcel Data](https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html).
 
 <br>
 
@@ -168,8 +168,7 @@ The first question has been completed for you.
 
 ## Question 1: Vacant Lots
 
-**Question:** *Where are the majority of vacant lots located in the* 
-*downtown? Map your results.*
+**Question:** *Where are the majority of vacant lots located in downtown Syracuse? Map your results.*
 
 **Note:** *This solution has been provided for you.*
 
@@ -236,7 +235,7 @@ plot(downtown,
 
 ## Question 3: New Construction
 
-**Question:** *Where is new construction located in the city?. Map your results.*
+**Question:** *Where is new construction located in the city? Map your results.*
 
 **Note:** You may use `>=` (greater than or equal) or `>` (greater than) 1980.
 
@@ -461,7 +460,7 @@ plot(downtown,
 
 ## Challenge III: Total Commercial Value
 
-**Instructions:** *What is the total value of all of the commercial parcels in Downtown?*
+**Instructions:** *What is the total value of all of the commercial parcels in downtown Syracuse?*
 
 **Answer:** The total value of all commercial parcels is **[$X]**.
 
@@ -478,7 +477,7 @@ plot(downtown,
 
 ## Challenge IV: Total Non-Commercial Value
 
-**Question:** *What is the total value of all of the non-commercial parcels in Downtown?*
+**Question:** *What is the total value of all of the non-commercial parcels in downtown Syracuse?*
 
 **Answer:** The total value of all non-commercial parcels is **[$X]**.
 
