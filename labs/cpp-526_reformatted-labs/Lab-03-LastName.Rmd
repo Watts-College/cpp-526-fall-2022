@@ -6,7 +6,7 @@ output:
   html_document:
     theme: readable
     df_print: paged
-    highlight: tango
+    highlight: haddock
 ---
 
 ```{r include = FALSE}
