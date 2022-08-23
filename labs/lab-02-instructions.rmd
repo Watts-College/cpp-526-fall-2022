@@ -5,12 +5,8 @@ output:
     theme: readable
     df_print: paged
     highlight: tango
-    toc: true
-    self_contained: false
-    number_sections: false
-    css: textbook.css
     include:
-      after_body: footer.html    
+      after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}

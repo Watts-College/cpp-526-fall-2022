@@ -5,6 +5,8 @@ output:
     theme: readable
     df_print: paged
     highlight: tango
+    include:
+      after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
