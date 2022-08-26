@@ -318,7 +318,7 @@ You can create a new R Markdown file, or download the **LAB-05 RMD template**:
 
 Practice writing logical statements and basic data recipes for the following:
 
-#### 1) How many accidents happen on Mondays?
+#### 1) How many accidents happened on Mondays?
 
 * Sum over a logical statement 
 
@@ -380,18 +380,18 @@ dat %>%
 #### 1) Create a table of counts of accidents by time of day (24 one-hour segments) and age of driver (use the factor age groups). 
 
 
-Which age group has the largest number of accidents at 7am? 
+Which age group has the largest number of accidents at 7AM? 
 
 You can use the dplyr **count()** function for this (or use **table()** in core R if you are old school like that). 
 
 
 #### 2) Create a new table of time of day and age group, but report the proportion of accidents by time of day for each age group (i.e. the proportions WITHIN EACH AGE GROUP should sum to one).
 
-Which age group experiences the largest proportion of accidents at 7am? 
+Which age group experiences the largest proportion of accidents at 7AM? 
 
 Note, this calculation would be useful for assessing whether there are differences when each age group is driving recklessly. You can see differences in alertness and physical stamina across age groups at different times of day. 
 
-Do NOT confuse this question with, what age group is most likely to cause an accident at a given time of day. In that case, all of the proportions WITHIN EACH TIME PERIOD would sum to one. 
+Do NOT confuse this question with: what age group is most likely to cause an accident at a given time of day. In that case, all of the proportions WITHIN EACH TIME PERIOD would sum to one. 
 
 
 ```{r, eval=T, echo=F}
@@ -435,7 +435,7 @@ The data recipe will be:
 ```r
 d %>% count( f1, f2 )
 # or
-d %>% group_by( f1, f2 ) %>% summarize( n=n() )
+d %>% group_by( f1, f2 ) %>% summarize( n = n() )
 ```
 
 ```{r, echo=F}
@@ -508,7 +508,7 @@ d %>%
   count( f1, f2 ) %>% 
   group_by( f1 ) %>% 
   mutate( n.f1 = sum(n) ) %>% 
-  mutate( prop= n / n.f1 )
+  mutate( prop = n / n.f1 )
 ```
 
 
@@ -519,7 +519,7 @@ d %>%
   count( f1, f2 ) %>% 
   group_by( f1 ) %>% 
   mutate( n.f1 = sum(n) ) %>% 
-  mutate( prop= round( n / n.f1, 2 ) ) %>% 
+  mutate( prop = round( n / n.f1, 2 ) ) %>% 
   filter( f2 == "L-01" )
 ```
 
@@ -591,8 +591,8 @@ d2 <-
   count( hour )
 
 plot( as.numeric(d2$hour), d2$n, pch=19, type="b", cex=2, bty="n",
-      xlab="Hour of the Day", ylab="Number of Crashes", 
-      main="Number of Crashes by Hour of the Day" )
+      xlab="Hour of the Day", ylab="Total Number of Accidents", 
+      main="Total Number of Accidents by Time of Day" )
 
 
 d2 <- 
@@ -612,7 +612,7 @@ d2 <-
 
 plot( as.numeric(d2$hour), d2$harm, pch=19, type="b", cex=2, bty="n",
       xlab="Hour of the Day", ylab="Proportion of Accidents Resulting in Harm",
-      main="Proportion of Crashes that Result in Injuries or Fatalities")
+      main="Proportion of Accidents that Result in Injuries or Fatalities")
 
 d2 <- 
   dat %>% 
@@ -622,7 +622,7 @@ d2 <-
 
 plot( as.numeric(d2$hour), d2$ave.num.injuries, pch=19, type="b", cex=2, bty="n",
       xlab="Hour of the Day", ylab="Ave. Number of Passengers Hurt",
-      main="Average Injuries or Fatalities Per Harmful Crash")
+      main="Average Injuries or Fatalities Per Harmful Accidents")
 
 
 

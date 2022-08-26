@@ -135,7 +135,7 @@ sum(dat$day == "Mon",
 
 ## 2. Monday Accidents (%)
 
-**Question:** *What proportion of accidents each week occur on Monday??*
+**Question:** *What proportion of accidents each week occur on Monday?*
 
 <br>
 
@@ -153,7 +153,7 @@ sum(dat$day == "Mon",
 
 ## 3. Harmful Monday Accidents (%)
 
-**Question:** *What proportion of accidents on Mondays result in harm??*
+**Question:** *What proportion of accidents on Mondays result in harm?*
 
 **Note:** *"Harm" is defined as any accident that causes at least one injury or* 
 *fatality, a.k.a. a "casualty".*
@@ -174,7 +174,7 @@ sum(dat$day == "Mon",
 
 ## 4. Most Common Accidents
 
-**Question:** *What is the most common accident type on Mondays?*
+**Question:** *What is the most common type of accident (Collisionmanner) that occurs on Mondays?*
 
 <br>
 
@@ -247,7 +247,7 @@ The following provides summaries of accidents by age groups.
 
 **Instructions:** Create a table of counts of accidents by time of day (`hour12`) and age of driver (`age`).
 
-**Question:** *Which age group has the largest number of accidents at 7 AM?*
+**Question:** *Which age group has the largest number of accidents at 7AM?*
 
 <br>
 
@@ -329,8 +329,8 @@ dat %>%
        pch = 19,
        cex = 2,
        xlab = "Hour",
-       ylab = "Total Accidents",
-       main = "Total Accidents by Time of Day")
+       ylab = "Total Number of Accidents",
+       main = "Total Number of Accidents by Time of Day")
 
 ```
 
@@ -352,7 +352,7 @@ dat %>%
 
 ## 3. Accidents with Casualties (%)
 
-**Instructions:** Visualize the proportion of harmful collisions our of all collisions by time of day (`hour`).
+**Instructions:** Visualize the proportion of harmful accidents out of all accidents by time of day (`hour`).
 
 <br>
 
