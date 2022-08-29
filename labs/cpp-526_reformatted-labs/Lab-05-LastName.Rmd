@@ -1,5 +1,5 @@
 ---
-title: "Lab 05 - Tempe Accident Analysis"
+title: "Lab 05 - Data Wrangling"
 author: "Your Name"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -30,7 +30,7 @@ library(pander)                           # Load required packages
 The following analysis uses data comprised of traffic accidents in the city of 
 Tempe, Arizona. They constitute 28,470 observations and 32 variables. You can 
 find more details in the dataset documentation at the 
-[**Tempe Open Data Portal**](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08). 
+[**Tempe Open Data Portal**](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about). 
 
 ```{r include = FALSE}
 

@@ -621,7 +621,7 @@ d2 <-
   summarize( ave.num.injuries = mean( Totalinjuries + Totalfatalities ) )
 
 plot( as.numeric(d2$hour), d2$ave.num.injuries, pch=19, type="b", cex=2, bty="n",
-      xlab="Hour of the Day", ylab="Ave. Number of Passengers Hurt",
+      xlab="Hour of the Day", ylab="Average Number of Passengers Hurt",
       main="Average Injuries or Fatalities Per Harmful Accidents")
 
 
