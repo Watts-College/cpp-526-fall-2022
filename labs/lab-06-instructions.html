@@ -1936,10 +1936,11 @@ year. As a result,</p>
 </table>
 <p>The WRONG way to merge these two datasets is to use only the employee
 ID. In this case, since the rows are now no longer unique, the only
-choice the merge() function has is to join EVERY instance on the right
-to each instance on the left. It has the effect of blowing up the size
-of the database (notice we have increased from 6 to 12 rows), as well as
-duplicating fields and incorrectly aligning data.</p>
+choice the <strong>merge()</strong> function has is to join EVERY
+instance on the right to each instance on the left. It has the effect of
+blowing up the size of the database (notice we have increased from 6 to
+12 rows), as well as duplicating fields and incorrectly aligning
+data.</p>
 <p>Row number 2, for example, reports that employee A received a bonus
 on $54,000 in sales.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">merge</span>( dat1, dat2, <span class="at">by=</span><span class="st">&quot;id&quot;</span> )         <span class="sc">%&gt;%</span> <span class="fu">pander</span>()</span></code></pre></div>
@@ -2726,14 +2727,14 @@ or team budgets.</p>
 <p>Follow these steps to build your dataset:</p>
 <ol style="list-style-type: decimal">
 <li>Aggregate salaries by team and year into a total salaries variable
-(group_by + summarize).</li>
+(use <code>group_by()</code> + <code>summarize()</code>).</li>
 <li>Include a count of players per team each season.</li>
 <li>Merge the Teams dataset with your new team salaries table using both
 <strong>teamID</strong> and <strong>yearID</strong> as unique keys.</li>
 <li>Create a new variable that measures the cost of each win for each
 team, by season.</li>
-<li>Filter the results to retain only teams that have at least 25 teams
-on their roster each year.</li>
+<li>Filter the results to retain only teams that have at least 25
+players on their roster each year.</li>
 <li>Sort your list and report the teams with the lowest cost per
 win.</li>
 </ol>
@@ -2751,8 +2752,8 @@ were available. Data was not available for all players in all seasons,
 so we filter by n &gt; 25 to ensure we have a reliable estimate of the
 team’s budget that year.</li>
 <li><strong>cost.per.win</strong> is represented in hundreds of
-thousands of dollars here for simplicity. (wins / (budget/100000)
-)<br />
+thousands of dollars here for simplicity: (wins / (budget/100000)
+).<br />
 </li>
 <li><strong>Rank</strong> is from Teams, and is their final league
 ranking at the end of the season.</li>

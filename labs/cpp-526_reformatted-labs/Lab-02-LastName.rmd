@@ -7,6 +7,8 @@ output:
     df_print: paged
     theme: cerulean
     highlight: haddock
+    toc: yes
+    toc_float: yes
 ---
 
 ```{r setup, include = FALSE}

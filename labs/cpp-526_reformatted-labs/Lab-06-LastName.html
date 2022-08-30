@@ -11,8 +11,9 @@
 
 <meta name="author" content="Your Name" />
 
+<meta name="date" content="2022-08-30" />
 
-<title>Lab 01 - Functions and Vectors</title>
+<title>Lab 06 - Dataset Joins</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2837,197 +2838,385 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Lab 01 - Functions and Vectors</h1>
+<h1 class="title toc-ignore">Lab 06 - Dataset Joins</h1>
 <h4 class="author">Your Name</h4>
-<h4 class="date">30 August, 2022</h4>
+<h4 class="date">August 30, 2022</h4>
 
 </div>
 
 
 <p><br></p>
-<div id="source-data" class="section level1">
-<h1>Source Data</h1>
-<p>The following report analyzes tax parcel data from Syracuse, New York
-(USA).</p>
-<p>View the “Data Dictionary” here: <a href="https://watts-college.github.io/cpp-526-fall-2022/labs/syr_parcels.html"><strong>Syracuse
-City Tax Parcel Data</strong></a></p>
-<p><br> <br></p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The following work identifies the baseball teams that have achieved
+the largest number of wins on the smallest budgets since 1985 per the
+<code>Lahman</code> data package.</p>
+<p><br></p>
 </div>
-<div id="importing-the-data" class="section level1">
-<h1>Importing the Data</h1>
-<p>The following code imports the Syracuse, NY tax parcel data using a
-URL.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://raw.githubusercontent.com/DS4PS/Data&quot;</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>              <span class="st">&quot;-Science-Class/master/DATA/syr_parcels.csv&quot;</span>)</span>
+<div id="preprocessing" class="section level1">
+<h1>Preprocessing</h1>
+<p>This analysis links two <code>Lahman</code> package tables,
+viz. <code>Salaries</code> and <code>Teams</code>, to determine total
+wins per season and the salary cost of each win earned. See the
+following preview of the first observations in
+<code>Salaries</code>:</p>
+<p><br></p>
+<table style="width:64%;">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="9%" />
+<col width="16%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">yearID</th>
+<th align="center">teamID</th>
+<th align="center">lgID</th>
+<th align="center">playerID</th>
+<th align="center">salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">barkele01</td>
+<td align="center">870000</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">bedrost01</td>
+<td align="center">550000</td>
+</tr>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">benedbr01</td>
+<td align="center">545000</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">campri01</td>
+<td align="center">633333</td>
+</tr>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">ceronri01</td>
+<td align="center">625000</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">chambch01</td>
+<td align="center">800000</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>See the following preview of select variables and first observations
+in <code>Teams</code>:</p>
+<p><br></p>
+<table style="width:56%;">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="9%" />
+<col width="6%" />
+<col width="6%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">yearID</th>
+<th align="center">teamID</th>
+<th align="center">lgID</th>
+<th align="center">G</th>
+<th align="center">W</th>
+<th align="center">L</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1871</td>
+<td align="center">BS1</td>
+<td align="center">NA</td>
+<td align="center">31</td>
+<td align="center">20</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">1871</td>
+<td align="center">CH1</td>
+<td align="center">NA</td>
+<td align="center">28</td>
+<td align="center">19</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">1871</td>
+<td align="center">CL1</td>
+<td align="center">NA</td>
+<td align="center">29</td>
+<td align="center">10</td>
+<td align="center">19</td>
+</tr>
+<tr class="even">
+<td align="center">1871</td>
+<td align="center">FW1</td>
+<td align="center">NA</td>
+<td align="center">19</td>
+<td align="center">7</td>
+<td align="center">12</td>
+</tr>
+<tr class="odd">
+<td align="center">1871</td>
+<td align="center">NY2</td>
+<td align="center">NA</td>
+<td align="center">33</td>
+<td align="center">16</td>
+<td align="center">17</td>
+</tr>
+<tr class="even">
+<td align="center">1871</td>
+<td align="center">PH1</td>
+<td align="center">NA</td>
+<td align="center">28</td>
+<td align="center">21</td>
+<td align="center">7</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Lastly, <code>Salaries</code> data are adjusted for inflation at a
+constant annual increase rate of 3%. Observe:</p>
+<p><br></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Salaries <span class="ot">&lt;-</span> Salaries <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">salary.adj =</span> salary <span class="sc">*</span> (<span class="fl">1.03</span>)<span class="sc">^</span>(<span class="fu">max</span>(yearID) <span class="sc">-</span> yearID))</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">strings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Salaries) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pander</span>()</span></code></pre></div>
+<table style="width:82%;">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="9%" />
+<col width="16%" />
+<col width="12%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">yearID</th>
+<th align="center">teamID</th>
+<th align="center">lgID</th>
+<th align="center">playerID</th>
+<th align="center">salary</th>
+<th align="center">salary.adj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">barkele01</td>
+<td align="center">870000</td>
+<td align="center">2175070</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">bedrost01</td>
+<td align="center">550000</td>
+<td align="center">1375044</td>
+</tr>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">benedbr01</td>
+<td align="center">545000</td>
+<td align="center">1362544</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">campri01</td>
+<td align="center">633333</td>
+<td align="center">1583383</td>
+</tr>
+<tr class="odd">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">ceronri01</td>
+<td align="center">625000</td>
+<td align="center">1562550</td>
+</tr>
+<tr class="even">
+<td align="center">1985</td>
+<td align="center">ATL</td>
+<td align="center">NL</td>
+<td align="center">chambch01</td>
+<td align="center">800000</td>
+<td align="center">2000064</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>In order to calculate the cost per win, adjusted individual player
+salaries from the <code>Salaries</code> table must be aggregated by team
+and year in the <code>Teams</code> table.</p>
 <p><br> <br></p>
 </div>
-<div id="previewing-the-data" class="section level1">
-<h1>Previewing the Data</h1>
-<p>There are several exploratory functions to better understand our new
-dataset.</p>
-<p>We can inspect the first 5 rows of these data using function
-<code>head()</code>.</p>
+<div id="step-1-aggregating-salaries" class="section level1">
+<h1>Step 1: Aggregating Salaries</h1>
+<p>Using the <code>Salaries</code> table and grouping on variables
+<code>yearID</code> and <code>teamID</code> via package
+<code>dplyr</code> function <code>group_by()</code>, the following uses
+function <code>summarize()</code> to <em>calculate and name</em> the
+following summary variables for <em>each year and team</em>:</p>
 <p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dat, <span class="dv">5</span>)              <span class="co"># Preview a dataset with &#39;head()&#39;</span></span></code></pre></div>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["tax_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["neighborhood"],"name":[2],"type":["chr"],"align":["left"]},{"label":["stnum"],"name":[3],"type":["chr"],"align":["left"]},{"label":["stname"],"name":[4],"type":["chr"],"align":["left"]},{"label":["zip"],"name":[5],"type":["chr"],"align":["left"]},{"label":["owner"],"name":[6],"type":["chr"],"align":["left"]},{"label":["frontfeet"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["depth"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["sqft"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["acres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["yearbuilt"],"name":[11],"type":["int"],"align":["right"]},{"label":["age"],"name":[12],"type":["int"],"align":["right"]},{"label":["age_range"],"name":[13],"type":["chr"],"align":["left"]},{"label":["land_use"],"name":[14],"type":["chr"],"align":["left"]},{"label":["units"],"name":[15],"type":["int"],"align":["right"]},{"label":["residential"],"name":[16],"type":["lgl"],"align":["right"]},{"label":["rental"],"name":[17],"type":["lgl"],"align":["right"]},{"label":["vacantbuil"],"name":[18],"type":["lgl"],"align":["right"]},{"label":["assessedla"],"name":[19],"type":["int"],"align":["right"]},{"label":["assessedva"],"name":[20],"type":["int"],"align":["right"]},{"label":["tax.exempt"],"name":[21],"type":["lgl"],"align":["right"]},{"label":["countytxbl"],"name":[22],"type":["int"],"align":["right"]},{"label":["schooltxbl"],"name":[23],"type":["int"],"align":["right"]},{"label":["citytaxabl"],"name":[24],"type":["int"],"align":["right"]},{"label":["star"],"name":[25],"type":["lgl"],"align":["right"]},{"label":["amtdelinqu"],"name":[26],"type":["dbl"],"align":["right"]},{"label":["taxyrsdeli"],"name":[27],"type":["int"],"align":["right"]},{"label":["totint"],"name":[28],"type":["dbl"],"align":["right"]},{"label":["overduewater"],"name":[29],"type":["dbl"],"align":["right"]}],"data":[{"1":"1393130501","2":"South Valley","3":"2655","4":"VALLEY DR","5":"13215","6":"CLARMIN BUILDERS ONON COR","7":"67.20","8":"50.00","9":"2149.182","10":"0.04933843","11":"NA","12":"NA","13":"NA","14":"Vacant Land","15":"0","16":"FALSE","17":"FALSE","18":"FALSE","19":"475","20":"500","21":"TRUE","22":"500","23":"500","24":"500","25":"NA","26":"0","27":"0","28":"0","29":"0.00","_rn_":"1"},{"1":"1393130500","2":"South Valley","3":"2635","4":"VALLEY DR","5":"13120","6":"JOHNSTON LEE R","7":"104.80","8":"46.50","9":"6370.403","10":"0.14624434","11":"1925","12":"90","13":"81-90","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"10800","20":"69300","21":"FALSE","22":"69300","23":"69300","24":"69300","25":"TRUE","26":"0","27":"0","28":"0","29":"177.79","_rn_":"2"},{"1":"1437100600","2":"South Valley","3":"203","4":"HAYES TERR","5":"13224","6":"CHRISTO CRAIG S","7":"82.87","8":"168.28","9":"12910.006","10":"0.29637297","11":"1957","12":"58","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"20200","20":"88300","21":"FALSE","22":"88300","23":"88300","24":"88300","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"3"},{"1":"1425100900","2":"South Valley","3":"100","4":"EDNA RD & CITY LINE","5":"13120","6":"HAWKINS FARMS INC","7":"65.00","8":"160.89","9":"10322.661","10":"0.23697569","11":"1958","12":"57","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"70500","21":"FALSE","22":"70500","23":"70500","24":"70500","25":"NA","26":"0","27":"0","28":"0","29":"0.00","_rn_":"4"},{"1":"1425101000","2":"South Valley","3":"104","4":"EDNA RD","5":"13205","6":"PETERS LYNNETTE","7":"65.00","8":"160.89","9":"10457.843","10":"0.24007904","11":"1965","12":"50","13":"41-50","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"74000","21":"FALSE","22":"74000","23":"74000","24":"74000","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<ul>
+<li><p>Total adjusted team budget using <code>salary.adj</code> and
+<code>sum()</code></p></li>
+<li><p>Total players using <code>n()</code></p></li>
+</ul>
 <p><br></p>
-<div id="listing-all-variables" class="section level3">
-<h3>Listing All Variables</h3>
-<p>Functions <code>names()</code> or <code>colnames()</code> will print
-all variable names in a dataset.</p>
-<p><br></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dat)                <span class="co"># List all variables with &#39;names()&#39;</span></span></code></pre></div>
-<pre><code>##  [1] &quot;tax_id&quot;       &quot;neighborhood&quot; &quot;stnum&quot;        &quot;stname&quot;       &quot;zip&quot;         
-##  [6] &quot;owner&quot;        &quot;frontfeet&quot;    &quot;depth&quot;        &quot;sqft&quot;         &quot;acres&quot;       
-## [11] &quot;yearbuilt&quot;    &quot;age&quot;          &quot;age_range&quot;    &quot;land_use&quot;     &quot;units&quot;       
-## [16] &quot;residential&quot;  &quot;rental&quot;       &quot;vacantbuil&quot;   &quot;assessedla&quot;   &quot;assessedva&quot;  
-## [21] &quot;tax.exempt&quot;   &quot;countytxbl&quot;   &quot;schooltxbl&quot;   &quot;citytaxabl&quot;   &quot;star&quot;        
-## [26] &quot;amtdelinqu&quot;   &quot;taxyrsdeli&quot;   &quot;totint&quot;       &quot;overduewater&quot;</code></pre>
-<p><br></p>
-</div>
-<div id="previewing-specific-variables" class="section level3">
-<h3>Previewing Specific Variables</h3>
-<p>We can also inspect the values of a variable by extracting it with
-<code>$</code>.</p>
-<p>The extracted variable is called a “vector”.</p>
-<p><br></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dat<span class="sc">$</span>owner, <span class="dv">10</span>)       <span class="co"># Preview a variable, or &quot;vector&quot;</span></span></code></pre></div>
-<pre><code>##  [1] &quot;CLARMIN BUILDERS ONON COR&quot; &quot;JOHNSTON LEE R&quot;           
-##  [3] &quot;CHRISTO CRAIG S&quot;           &quot;HAWKINS FARMS INC&quot;        
-##  [5] &quot;PETERS LYNNETTE&quot;           &quot;MITCHELL LOTAN G&quot;         
-##  [7] &quot;WHALEN GIOVANNA A&quot;         &quot;BERGH GARY D&quot;             
-##  [9] &quot;CITY OF SYRACUSE TD&quot;       &quot;DOUGHERTY ROBERT K JR&quot;</code></pre>
-<p><br></p>
-</div>
-<div id="listing-unique-values" class="section level3">
-<h3>Listing Unique Values</h3>
-<p>Function <code>unique()</code> helps us determine what values exist
-in a variable.</p>
-<p><br></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(dat<span class="sc">$</span>land_use)      <span class="co"># Print all possible values with &#39;unique()&#39;</span></span></code></pre></div>
-<pre><code>##  [1] &quot;Vacant Land&quot;        &quot;Single Family&quot;      &quot;Commercial&quot;        
-##  [4] &quot;Parking&quot;            &quot;Two Family&quot;         &quot;Three Family&quot;      
-##  [7] &quot;Apartment&quot;          &quot;Schools&quot;            &quot;Parks&quot;             
-## [10] &quot;Multiple Residence&quot; &quot;Cemetery&quot;           &quot;Religious&quot;         
-## [13] &quot;Recreation&quot;         &quot;Community Services&quot; &quot;Utilities&quot;         
-## [16] &quot;Industrial&quot;</code></pre>
-<p><br></p>
-</div>
-<div id="examining-data-structure" class="section level3">
-<h3>Examining Data Structure</h3>
-<p>Function <code>str()</code> provides an overview of total rows and
-columns (dimensions), variable classes, and a preview of values.</p>
-<p><br></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(<span class="at">object =</span> dat,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">vec.len =</span> <span class="dv">2</span>)          <span class="co"># Examine data structure with &#39;str()&#39;</span></span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    41502 obs. of  29 variables:
-##  $ tax_id      : int  1393130501 1393130500 1437100600 1425100900 1425101000 ...
-##  $ neighborhood: chr  &quot;South Valley&quot; &quot;South Valley&quot; ...
-##  $ stnum       : chr  &quot;2655&quot; &quot;2635&quot; ...
-##  $ stname      : chr  &quot;VALLEY DR&quot; &quot;VALLEY DR&quot; ...
-##  $ zip         : chr  &quot;13215&quot; &quot;13120&quot; ...
-##  $ owner       : chr  &quot;CLARMIN BUILDERS ONON COR&quot; &quot;JOHNSTON LEE R&quot; ...
-##  $ frontfeet   : num  67.2 104.8 ...
-##  $ depth       : num  50 46.5 ...
-##  $ sqft        : num  2149 6370 ...
-##  $ acres       : num  0.0493 0.1462 ...
-##  $ yearbuilt   : int  NA 1925 1957 1958 1965 ...
-##  $ age         : int  NA 90 58 57 50 ...
-##  $ age_range   : chr  NA &quot;81-90&quot; ...
-##  $ land_use    : chr  &quot;Vacant Land&quot; &quot;Single Family&quot; ...
-##  $ units       : int  0 0 0 0 0 ...
-##  $ residential : logi  FALSE TRUE TRUE ...
-##  $ rental      : logi  FALSE FALSE FALSE ...
-##  $ vacantbuil  : logi  FALSE FALSE FALSE ...
-##  $ assessedla  : int  475 10800 20200 18000 18000 ...
-##  $ assessedva  : int  500 69300 88300 70500 74000 ...
-##  $ tax.exempt  : logi  TRUE FALSE FALSE ...
-##  $ countytxbl  : int  500 69300 88300 70500 74000 ...
-##  $ schooltxbl  : int  500 69300 88300 70500 74000 ...
-##  $ citytaxabl  : int  500 69300 88300 70500 74000 ...
-##  $ star        : logi  NA TRUE TRUE ...
-##  $ amtdelinqu  : num  0 0 0 0 0 ...
-##  $ taxyrsdeli  : int  0 0 0 0 0 ...
-##  $ totint      : num  0 0 0 0 0 ...
-##  $ overduewater: num  0 178 ...</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code></pre></div>
 <p><br> <br></p>
 </div>
+<div id="step-2-join-salaries-teams" class="section level1">
+<h1>Step 2: Join Salaries &amp; Teams</h1>
+<p>The following merges the <code>Salaries</code> summary data and full
+<code>Teams</code> tables using either base R function
+<code>merge()</code> or package <code>dplyr</code> functions
+<code>left_join()</code>.</p>
+<p><br></p>
+<ul>
+<li><p>Variables <code>teamID</code> and <code>yearID</code> are unique
+merging keys</p></li>
+<li><p>Example:
+<code>dataset_1 %&gt;% left_join(dataset_2)</code></p></li>
+</ul>
+<p><br></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code></pre></div>
+<p><br> <br></p>
 </div>
-<div id="questions-solutions" class="section level1">
-<h1>Questions &amp; Solutions</h1>
-<p><strong>Instructions:</strong> Provide the code for each solution in
-the following “chunks”.</p>
-<p><em>Remember to modify the text to show your answer in human-readable
-terms.</em></p>
+<div id="step-3-calculate-cost-per-win" class="section level1">
+<h1>Step 3: Calculate Cost per Win</h1>
+<p>The following uses the merged <code>Salaries</code> summary data and
+<code>Teams</code> data to create a new variable with function
+<code>mutate()</code> that calculates the total team salary cost per
+win, divided by $100,000.</p>
 <p><br></p>
-<div id="question-1-total-parcels" class="section level2">
-<h2>Question 1: Total Parcels</h2>
-<p><strong>Question:</strong> <em>How many tax parcels are in Syracuse,
-NY?</em></p>
-<p><strong>Answer:</strong> There are <strong>[X]</strong> tax parcels
-in Syracuse, NY.</p>
+<ul>
+<li><p>Divide (<code>/</code>) total salaries from <strong>Step
+1</strong> by total wins (<code>W</code>)</p></li>
+<li><p>Divide (<code>/</code>) that value by
+<code>100000</code></p></li>
+</ul>
 <p><br></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use an exploratory function like &#39;dim()&#39;, &#39;nrow()&#39;, or &#39;str()&#39;</span></span></code></pre></div>
-<p><br></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code></pre></div>
+<p><br> <br></p>
 </div>
-<div id="question-2-total-acres" class="section level2">
-<h2>Question 2: Total Acres</h2>
-<p><strong>Question:</strong> <em>How many acres of land are in
-Syracuse, NY?</em></p>
-<p><strong>Answer:</strong> There are <strong>[X]</strong> acres of land
-in Syracuse, NY.</p>
+<div id="step-4-select-filter-arrange" class="section level1">
+<h1>Step 4: Select, Filter, &amp; Arrange</h1>
+<p>The following filters out teams in merged data with less than 25
+players on their annual roster. It then arranges teams in ascending
+order by cost per win. Lastly, only variables are preserved to create
+the full version of the table preview.</p>
 <p><br></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass a numeric variable to function &#39;sum()&#39;, with argument &#39;na.rm = TRUE&#39;</span></span></code></pre></div>
+<ul>
+<li><p>Use <code>filter()</code> to remove observations with less than
+25 players</p></li>
+<li><p>Use <code>arrange()</code> to order observations by total cost
+per win</p></li>
+<li><p>Use <code>select()</code> to preserve only essential
+variables</p></li>
+</ul>
 <p><br></p>
-</div>
-<div id="question-3-vacant-buildings" class="section level2">
-<h2>Question 3: Vacant Buildings</h2>
-<p><strong>Question:</strong> <em>How many vacant buildings are there in
-Syracuse, NY?</em></p>
-<p><strong>Answer:</strong> There are <strong>[X]</strong> vacant
-buildings in Syracuse, NY.</p>
+<p><strong>Objective:</strong> The following contains variables and
+initial values of the full table. Variable names may differ.</p>
 <p><br></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass a numeric variable to function &#39;sum()&#39;, with argument &#39;na.rm = TRUE&#39;</span></span></code></pre></div>
-</div>
-<div id="question-4-tax-exempt-parcels" class="section level2">
-<h2>Question 4: Tax-Exempt Parcels</h2>
-<p><strong>Question:</strong> <em>What proportion of parcels are
-tax-exempt?</em></p>
-<p><strong>Answer:</strong> <strong>[X]%</strong> of parcels are
-tax-exempt.</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="9%" />
+<col width="9%" />
+<col width="7%" />
+<col width="6%" />
+<col width="6%" />
+<col width="18%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">yearID</th>
+<th align="center">teamID</th>
+<th align="center">lgID</th>
+<th align="center">Rank</th>
+<th align="center">G</th>
+<th align="center">W</th>
+<th align="center">n</th>
+<th align="center">team.budget</th>
+<th align="center">cost.per.win</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1988</td>
+<td align="center">PIT</td>
+<td align="center">NL</td>
+<td align="center">2</td>
+<td align="center">160</td>
+<td align="center">85</td>
+<td align="center">27</td>
+<td align="center">13724134</td>
+<td align="center">1.615</td>
+</tr>
+<tr class="even">
+<td align="center">1986</td>
+<td align="center">TEX</td>
+<td align="center">AL</td>
+<td align="center">2</td>
+<td align="center">162</td>
+<td align="center">87</td>
+<td align="center">26</td>
+<td align="center">16367320</td>
+<td align="center">1.881</td>
+</tr>
+<tr class="odd">
+<td align="center">1987</td>
+<td align="center">ML4</td>
+<td align="center">AL</td>
+<td align="center">3</td>
+<td align="center">162</td>
+<td align="center">91</td>
+<td align="center">28</td>
+<td align="center">17186960</td>
+<td align="center">1.889</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass a logical (&#39;TRUE&#39; or &#39;FALSE&#39;) variable to function &#39;mean()&#39;, with argument &#39;na.rm = TRUE&#39;</span></span></code></pre></div>
-<p><br></p>
-</div>
-<div id="question-5-neighborhoods-parcels" class="section level2">
-<h2>Question 5: Neighborhoods &amp; Parcels</h2>
-<p><strong>Question:</strong> <em>Which neighborhood contains the most
-tax parcels?</em></p>
-<p><strong>Answer:</strong> <strong>[X]</strong> contains the most tax
-parcels.</p>
-<p><br></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass the appropriate variable to function &#39;table()&#39;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional: Use additional functions to narrow your results</span></span></code></pre></div>
-<p><br></p>
-</div>
-<div id="question-6-neighborhoods-vacant-lots" class="section level2">
-<h2>Question 6: Neighborhoods &amp; Vacant Lots</h2>
-<p><strong>Question:</strong> <em>Which neighborhood contains the most
-vacant lots?</em></p>
-<p><strong>Answer:</strong> <strong>[X]</strong> contains the most
-vacant lots.</p>
-<p><br></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass two variables to function &#39;table()&#39;, separated by a comma</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># (Optional) use additional functions to narrow your results</span></span></code></pre></div>
+<p><strong>Solution:</strong> Create the full version of the table
+below.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code></pre></div>
 <p><br> <br></p>
 <center>
 ————
@@ -3038,113 +3227,20 @@ SUBMITTING</strong>
 ————
 </center>
 <p><br> <br></p>
-</div>
-<div id="recommended-functions" class="section level2">
-<h2>Recommended Functions</h2>
-<p>You may use any of the following functions for this assignment.</p>
-<p><br></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(), <span class="fu">colnames</span>()     <span class="co"># Variable names</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>()                  <span class="co"># Preview data; defaults to 6 rows</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>()                <span class="co"># Count of total elements in vector</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(), <span class="fu">nrow</span>(), <span class="fu">ncol</span>()   <span class="co"># Dataset dimensions</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>()                   <span class="co"># Sum numeric values or total &#39;TRUE&#39; values</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>()                  <span class="co"># Average numeric values or find proportions of &#39;TRUE&#39; values</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()               <span class="co"># Summarize variables, whether numeric, logical, or character</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>()                 <span class="co"># Tally total occurrences of each unique value in a vector or variable</span></span></code></pre></div>
-<p><br> <br></p>
-</div>
-<div id="tips-tricks" class="section level2">
-<h2>Tips &amp; Tricks</h2>
-<p>The following tips and tricks are essential to understand in order to
-complete this assignment.</p>
-<p><br></p>
-<div id="extracting-variables" class="section level4">
-<h4>Extracting Variables</h4>
-<p>Reference variables in R by using the <strong>dataset name</strong>
-and <strong>variable name</strong>, separated by the <code>$</code>
-operator.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dat<span class="sc">$</span>acres)      <span class="co"># Extract variable &#39;acres&#39; from dataset &#39;dat&#39;</span></span></code></pre></div>
-<p><br></p>
-</div>
-<div id="adding-up-values" class="section level4">
-<h4>Adding Up Values</h4>
-<p>Use function <code>sum()</code> with a numeric vector to return the
-sum of all of its values.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">5</span>))       <span class="co"># Add up values 10, 20, and 5</span></span></code></pre></div>
-<pre><code>## [1] 35</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(dat<span class="sc">$</span>sqft)           <span class="co"># Add up variable &#39;sqft&#39; from dataset &#39;dat&#39;</span></span></code></pre></div>
-<pre><code>## [1] 544956951</code></pre>
-<p><br></p>
-</div>
-<div id="adding-up-true-values" class="section level4">
-<h4>Adding Up True Values</h4>
-<p>Function <code>sum()</code> with logical values,
-i.e. <code>TRUE</code> and <code>FALSE</code> values, will add up all
-instances of <code>TRUE</code>.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>       <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, </span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>       <span class="cn">FALSE</span>, <span class="cn">FALSE</span>)    <span class="co"># Creating a vector of logical values: &#39;x&#39;</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x)                  <span class="co"># Determining the total &#39;TRUE&#39; values</span></span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<p><br></p>
-</div>
-<div id="proportions-of-true-values" class="section level4">
-<h4>Proportions of True Values</h4>
-<p>Function <code>mean()</code> with logical values will provide the
-total proportion of <code>TRUE</code> values.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>       <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>       <span class="cn">FALSE</span>, <span class="cn">FALSE</span>)    <span class="co"># Creating a vector of logical values: &#39;x&#39;</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)                 <span class="co"># Determining the proportion of &#39;TRUE&#39; values</span></span></code></pre></div>
-<pre><code>## [1] 0.3333333</code></pre>
-<p><br></p>
-</div>
-<div id="sums-proportions-with-missing-values" class="section level4">
-<h4>Sums &amp; Proportions with Missing Values</h4>
-<p>R wants you to know if <code>sum()</code>, <code>mean()</code> etc.
-include missing or <code>NA</code> values.</p>
-<p>If a value is missing (<code>NA</code>), these functions will return
-<code>NA</code>.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">NA</span>, <span class="dv">5</span>)     <span class="co"># Creating a vector with a missing (&#39;NA&#39;) value: &#39;y&#39;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(y)                  <span class="co"># Attempting to add up the values in &#39;y&#39;</span></span></code></pre></div>
-<pre><code>## [1] NA</code></pre>
-<p><br></p>
-</div>
-<div id="allowing-calculations-with-missing-values" class="section level4">
-<h4>Allowing Calculations with Missing Values</h4>
-<p>Use argument <code>na.rm = TRUE</code> to allow functions to ignore
-missing (<code>NA</code>) values.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">NA</span>, <span class="dv">5</span>)     <span class="co"># Creating a vector with a missing (&#39;NA&#39;) value: &#39;y&#39;</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(y, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)    <span class="co"># Add up the values in &#39;y&#39; while ignoring missing values</span></span></code></pre></div>
-<pre><code>## [1] 10</code></pre>
-<p><br> <br></p>
-</div>
-</div>
-</div>
-<div id="how-to-submit" class="section level1">
-<h1>How to Submit</h1>
+<div id="how-to-submit" class="section level4">
+<h4><strong>How to Submit</strong></h4>
 <p>Use the following instructions to submit your assignment, which may
 vary depending on your course’s platform.</p>
-<p><br></p>
-<div id="knitting-to-html" class="section level3">
-<h3>Knitting to HTML</h3>
+<p><br> <br></p>
+</div>
+<div id="knitting-to-html" class="section level4">
+<h4><strong>Knitting to HTML</strong></h4>
 <p>When you have completed your assignment, click the “Knit” button to
 render your <code>.RMD</code> file into a <code>.HTML</code> report.</p>
-<p><br></p>
+<p><br> <br></p>
 </div>
-<div id="special-instructions" class="section level3">
-<h3>Special Instructions</h3>
+<div id="special-instructions" class="section level4">
+<h4><strong>Special Instructions</strong></h4>
 <p>Perform the following depending on your course’s platform:</p>
 <ul>
 <li><strong>Canvas:</strong> Upload both your <code>.RMD</code> and
@@ -3155,10 +3251,10 @@ file and upload to the appropriate link</li>
 </ul>
 <p><code>.HTML</code> files are preferred but not allowed by all
 platforms.</p>
-<p><br></p>
+<p><br> <br></p>
 </div>
-<div id="before-you-submit" class="section level3">
-<h3>Before You Submit</h3>
+<div id="before-you-submit" class="section level4">
+<h4><strong>Before You Submit</strong></h4>
 <p>Remember to ensure the following before submitting your
 assignment.</p>
 <ol style="list-style-type: decimal">
@@ -3177,8 +3273,8 @@ etc.</li>
 R Style Guide</a> for examples of common conventions.</p>
 <p><br> <br></p>
 </div>
-<div id="common-knitting-issues" class="section level3">
-<h3>Common Knitting Issues</h3>
+<div id="common-knitting-issues" class="section level4">
+<h4><strong>Common Knitting Issues</strong></h4>
 <p><code>.RMD</code> files are knit into <code>.HTML</code> and other
 formats procedural, or line-by-line.</p>
 <ul>
